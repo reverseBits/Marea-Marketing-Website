@@ -247,7 +247,7 @@ nav.solid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 4rem 6vw 5rem;
+  padding: 4rem 6vw 8rem;
   gap: 5rem;
   position: relative; overflow: hidden;
 }
@@ -264,7 +264,7 @@ nav.solid {
 /* PHONE */
 .phone-wrap {
   display: flex; justify-content: center; align-items: center;
-  margin-top: -3rem;
+  margin-top: -2rem;
 }
 .phone {
   width: min(320px, 76vw);
@@ -346,7 +346,11 @@ nav.solid {
 }
 
 /* ritual text */
-.ritual-text { position: relative; z-index: 1; }
+.ritual-text {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; justify-content: center;
+  align-self: center;
+}
 .sec-hl {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.2rem, 4vw, 3.8rem);
