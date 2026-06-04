@@ -217,17 +217,23 @@ nav.solid {
   justify-content: center;
   position: relative; z-index: 1;
 }
+.sstat {
+  display: flex; flex-direction: column; align-items: center;
+}
 .sstat-num {
   display: block;
   font-family: 'Playfair Display', serif;
   font-size: clamp(3rem, 5.5vw, 5rem);
   font-weight: 700; color: var(--rose-dark);
   line-height: 1;
+  font-variant-numeric: lining-nums;
+  text-align: center;
 }
 .sstat-lbl {
   font-size: .8rem; color: var(--text-sub);
   margin-top: .5rem; max-width: 150px;
   font-weight: 300; line-height: 1.55;
+  text-align: center;
 }
 @media (max-width: 600px) { .silence-stats { gap: 2.5rem; } }
 
@@ -691,36 +697,36 @@ nav.solid {
   position: relative; z-index: 1;
 }
 .cta-connect-card {
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.1);
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.22);
   border-radius: 16px;
   padding: 1.4rem 1.5rem;
   display: flex; flex-direction: column; gap: .5rem;
   text-decoration: none;
   transition: background .2s, border-color .2s;
 }
-.cta-connect-card:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.18); }
+.cta-connect-card:hover { background: rgba(255,255,255,.2); border-color: rgba(255,255,255,.32); }
 .ccc-icon {
   width: 36px; height: 36px; border-radius: 10px;
-  background: rgba(255,255,255,.12);
+  background: rgba(255,255,255,.2);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: .2rem;
 }
 .ccc-title {
   font-size: .9rem; font-weight: 700;
-  color: rgba(255,255,255,.92); margin: 0;
+  color: rgba(255,255,255,.95); margin: 0;
 }
 .ccc-sub {
-  font-size: .76rem; color: rgba(255,255,255,.45);
+  font-size: .76rem; color: rgba(255,255,255,.7);
   line-height: 1.55; margin: 0; font-weight: 300; flex: 1;
 }
 .ccc-action {
   font-size: .75rem; font-weight: 600;
-  color: rgba(255,255,255,.65);
+  color: rgba(255,255,255,.82);
   margin-top: .6rem; display: inline-flex; align-items: center; gap: 4px;
   transition: color .2s;
 }
-.cta-connect-card:hover .ccc-action { color: rgba(255,255,255,.92); }
+.cta-connect-card:hover .ccc-action { color: white; }
 @media (max-width: 700px) {
   .cta-copy { text-align: center; }
   .cta-p { max-width: none; }
@@ -910,10 +916,10 @@ footer {
    STATS SOURCE footnote
    ============================================================ */
 .stats-source {
-  font-size: .64rem;
+  font-size: .8rem;
   color: var(--text-muted);
   margin-top: 2.5rem;
-  opacity: .6;
+  opacity: .75;
   line-height: 1.8;
   position: relative; z-index: 1;
 }
@@ -1185,19 +1191,19 @@ footer {
 
   <div class="silence-stats">
     <div class="sstat r">
-      <span class="sstat-num">355M<sup style="font-size:.35em;vertical-align:super;opacity:.6">¹</sup></span>
+      <span class="sstat-num">355M</span>
       <div class="sstat-lbl">menstruating women in India</div>
     </div>
     <div class="sstat r d1">
-      <span class="sstat-num">39%<sup style="font-size:.35em;vertical-align:super;opacity:.6">²</sup></span>
+      <span class="sstat-num">39%</span>
       <div class="sstat-lbl">of schools offer menstrual health education</div>
     </div>
     <div class="sstat r d2">
-      <span class="sstat-num">88%<sup style="font-size:.35em;vertical-align:super;opacity:.6">³</sup></span>
-      <div class="sstat-lbl">of studies link stress directly to menstrual disruption</div>
+      <span class="sstat-num">88%</span>
+      <div class="sstat-lbl">of studies link stress to menstrual disruption</div>
     </div>
   </div>
-  <p class="stats-source r d3">¹ Office of the Registrar General of India &nbsp;·&nbsp; ² UNFPA India Menstrual Health Report &nbsp;·&nbsp; ³ Meta-analysis of 41 studies (Gollenberg et al., 2010)</p>
+  <p class="stats-source r d3">Office of the Registrar General of India &nbsp;·&nbsp; UNFPA India Menstrual Health Report &nbsp;·&nbsp; Meta-analysis of 41 studies (Gollenberg et al., 2010)</p>
 </section>
 
 
