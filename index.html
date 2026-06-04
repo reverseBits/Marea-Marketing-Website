@@ -108,8 +108,9 @@ nav.solid {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding: 8rem 8vw 6rem;
+  align-items: start;
+  align-content: center;
+  padding: 8rem 8vw 8rem;
   gap: 6rem;
   position: relative;
   overflow: hidden;
@@ -117,7 +118,11 @@ nav.solid {
 }
 
 /* hero text */
-.hero-text { position: relative; z-index: 1; }
+.hero-text {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; justify-content: center;
+  align-self: center; align-items: flex-start;
+}
 .hero-hl {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.2rem, 4vw, 4rem);
@@ -131,6 +136,7 @@ nav.solid {
   max-width: 420px; margin-bottom: 2.8rem;
   font-weight: 300; line-height: 1.9;
 }
+.hero-cta-group { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; width: fit-content; }
 .hero-actions { display: flex; gap: .9rem; flex-wrap: wrap; }
 .btn-dark {
   display: inline-flex; align-items: center; gap: 8px;
@@ -154,8 +160,9 @@ nav.solid {
   transform: translateY(-2px);
 }
 .hero-note {
-  margin-top: 1.8rem; font-size: .78rem;
+  font-size: calc(.78rem + 1px);
   color: var(--text-muted); letter-spacing: .04em;
+  align-self: center;
 }
 
 /* hero visual */
@@ -172,8 +179,8 @@ nav.solid {
     gap: 3rem;
   }
   .hero-p { max-width: 100%; margin: 0 auto 2.2rem; }
+  .hero-cta-group { align-items: center; }
   .hero-actions { justify-content: center; }
-  .hero-note { text-align: center; }
 }
 
 /* ============================================================
@@ -799,11 +806,32 @@ footer {
 .pb-phase {
   top: 22%; left: -44%;
 }
+.pb-phase::after {
+  content: '';
+  position: absolute; top: 50%; right: -36px;
+  width: 32px; height: 1px;
+  background: rgba(167,98,98,.3);
+  transform: translateY(-50%);
+}
 .pb-day {
   top: 52%; right: -44%;
 }
+.pb-day::after {
+  content: '';
+  position: absolute; top: 50%; left: -36px;
+  width: 32px; height: 1px;
+  background: rgba(167,98,98,.3);
+  transform: translateY(-50%);
+}
 .pb-insight {
   bottom: 20%; left: -40%;
+}
+.pb-insight::after {
+  content: '';
+  position: absolute; top: 50%; right: -36px;
+  width: 32px; height: 1px;
+  background: rgba(167,98,98,.3);
+  transform: translateY(-50%);
 }
 @media (max-width: 880px) {
   .pb-phase, .pb-day, .pb-insight { display: none; }
@@ -1143,16 +1171,18 @@ footer {
   <!-- LEFT: text -->
   <div class="hero-text">
     <h1 class="hero-hl r d1">
-      Your cycle has<br/>always been trying<br/>to <em>tell you something.</em>
+      Understand <br> your cycle,<br><em>not just track it.</em>
     </h1>
     <p class="hero-p r d2">
-      Marea connects daily habits to your menstrual cycle, and shows you what it means. Science-backed. Privacy-first. Built for India.
+      Discover how your energy, mood, symptoms, and daily habits connect to your menstrual cycle.
     </p>
-    <div class="hero-actions r d3">
-      <a href="#ch-download" class="btn-dark">Download Marea</a>
-      <a href="#ch-ritual" class="btn-outline">See how it works</a>
+    <div class="hero-cta-group r d3">
+      <div class="hero-actions">
+        <a href="#ch-download" class="btn-dark">Download Marea</a>
+        <a href="#ch-ritual" class="btn-outline">See how it works</a>
+      </div>
+      <p class="hero-note d4">Science-backed · Privacy-first · Built for India</p>
     </div>
-    <p class="hero-note r d4">Free forever · No account needed · Data stays on your phone</p>
   </div>
 
   <!-- RIGHT: real app mockup -->
@@ -1286,9 +1316,9 @@ footer {
     <!-- LEFT: text -->
     <div class="jny-text">
       <p class="ch-kicker ck-light r">The difference</p>
-      <h2 class="sec-hl r d1">The longer you track,<br/>the more <em>you see.</em></h2>
+      <h2 class="sec-hl r d1">The longer<br/>you track,<br/>the more <em>you see.</em></h2>
       <p class="sec-p r d2">
-        Marea connects your daily habits — sleep, stress, movement, hydration — to your cycle over time. Patterns that took years to notice become visible in weeks.
+        Marea connects your daily habits: sleep, stress, movement, hydration to your cycle over time. Patterns that took years to notice become visible in weeks.
       </p>
       <div class="jny-unlock r d3">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -1432,7 +1462,7 @@ footer {
         <div class="lsc-body">
           <span class="lsc-cat">Cycle 101</span>
           <div class="lsc-title">What your flow colour is actually telling you</div>
-          <p class="lsc-hook">Bright red vs dark brown — it's not random. Your blood communicates something every time.</p>
+          <p class="lsc-hook">Bright red vs dark brown, it's not random. Your blood communicates something every time.</p>
           <div class="lsc-foot"><span class="lsc-time">⏱ 6 min</span></div>
         </div>
       </article>
@@ -1456,7 +1486,7 @@ footer {
         <div class="lsc-body">
           <span class="lsc-cat">Movement</span>
           <div class="lsc-title">Moving on day 1 of your period: brave or brilliant?</div>
-          <p class="lsc-hook">The science says something most people don't expect — and it might change your worst days.</p>
+          <p class="lsc-hook">The science says something most people don't expect, and it might change your worst days.</p>
           <div class="lsc-foot"><span class="lsc-time">⏱ 6 min</span></div>
         </div>
       </article>
@@ -1512,7 +1542,7 @@ footer {
         <div class="lsc-body">
           <span class="lsc-cat">Food</span>
           <div class="lsc-title">Skipping breakfast is messing with more than your mood</div>
-          <p class="lsc-hook">Your uterus cares about your meal schedule — irregular eating shows up in cycle data.</p>
+          <p class="lsc-hook">Your uterus cares about your meal schedule,  irregular eating shows up in cycle data.</p>
           <div class="lsc-foot"><span class="lsc-time">⏱ 6 min</span></div>
         </div>
       </article>
