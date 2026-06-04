@@ -852,15 +852,15 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 1.25rem;
-  transition: transform .35s cubic-bezier(0.16,1,0.3,1);
 }
-.screen-item:hover { transform: translateY(-10px); }
 .screen-item img {
   width: clamp(130px, 14vw, 200px);
   height: auto;
   filter: drop-shadow(0 28px 56px rgba(122,69,69,.16));
   display: block;
+  transition: transform .35s cubic-bezier(0.16,1,0.3,1);
 }
+.screen-item:hover img { transform: translateY(-10px); }
 .screen-item.screen-center img {
   width: clamp(130px, 14vw, 200px);
   filter: drop-shadow(0 28px 56px rgba(122,69,69,.16));
@@ -1219,12 +1219,12 @@ footer {
 
   <div class="screens-grid">
     <div class="screen-item r d1">
-      <img src="assets/images/cycle.png" alt="Cycle calendar with phase colors" loading="lazy" />
-      <span class="screen-caption">Cycle calendar</span>
-    </div>
-    <div class="screen-item screen-center r d2">
       <img src="assets/images/home.png" alt="Home dashboard showing phase and reflection" loading="lazy" />
       <span class="screen-caption">Home dashboard</span>
+    </div>
+    <div class="screen-item screen-center r d2">
+      <img src="assets/images/cycle.png" alt="Cycle calendar with phase colors" loading="lazy" />
+      <span class="screen-caption">Cycle calendar</span>
     </div>
     <div class="screen-item r d3">
       <img src="assets/images/habits.png" alt="Habits tracker with weekly averages" loading="lazy" />
