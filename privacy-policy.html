@@ -22,7 +22,7 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overscroll-behavior: none; }
 body {
   background: #fff;
   color: var(--text);
@@ -30,6 +30,7 @@ body {
   font-weight: 400;
   line-height: 1.8;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 /* NAV */
