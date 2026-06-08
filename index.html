@@ -608,10 +608,11 @@ nav.solid {
 }
 .lsc:hover { box-shadow: 0 6px 24px rgba(122,69,69,.08); }
 .lsc-img {
-  height: 130px; position: relative; overflow: hidden;
+  height: 200px; position: relative; overflow: hidden; background: #f5ede8;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .lsc-img svg { width: 62%; height: auto; }
+.lsc-img img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background: #f5ede8; }
 .lsc-body { padding: 1rem 1.1rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
 .lsc-cat {
   display: inline-block; align-self: flex-start; font-size: .58rem; text-transform: uppercase;
@@ -1042,15 +1043,17 @@ footer {
 }
 .am-hero {
   width: 100%;
-  height: 180px;
+  height: 280px;
   position: relative;
   overflow: hidden;
+  background: #f5ede8;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px 20px 0 0;
 }
 .am-hero svg { width: 100%; height: 100%; }
+.am-hero img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; position: absolute; top: 0; left: 0; background: #f5ede8; }
 .am-back {
   position: absolute;
   top: 12px;
@@ -1445,105 +1448,53 @@ footer {
 
       <!-- Card: Flow colour -->
       <article class="lsc" onclick="openArticle(1, this)">
-        <div class="lsc-img" style="background:linear-gradient(145deg,#F9E8E2,#F2D2C8,#FAE0D8)">
-          <svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="38"  cy="86" rx="15" ry="20" fill="#F87171" opacity=".88"/>
-            <polygon points="38,60 27,80 49,80"   fill="#F87171" opacity=".88"/>
-            <ellipse cx="82"  cy="86" rx="15" ry="20" fill="#DC2626" opacity=".88"/>
-            <polygon points="82,60 71,80 93,80"   fill="#DC2626" opacity=".88"/>
-            <ellipse cx="126" cy="86" rx="15" ry="20" fill="#991B1B" opacity=".9"/>
-            <polygon points="126,60 115,80 137,80" fill="#991B1B" opacity=".9"/>
-            <ellipse cx="170" cy="86" rx="15" ry="20" fill="#7C2D12" opacity=".9"/>
-            <polygon points="170,60 159,80 181,80" fill="#7C2D12" opacity=".9"/>
-            <defs><linearGradient id="spec2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#431407"/></linearGradient></defs>
-            <rect x="20" y="120" width="160" height="4" rx="2" fill="url(#spec2)" opacity=".55"/>
-          </svg>
+        <div class="lsc-img">
+          <img src="https://images.unsplash.com/photo-1567013514336-6de53c9e7e63?w=1200&auto=format&q=90" alt="Woman in wellness pose" loading="lazy">
         </div>
         <div class="lsc-body">
           <span class="lsc-cat">Cycle 101</span>
           <div class="lsc-title">What your flow colour is actually telling you</div>
           <p class="lsc-hook">Bright red vs dark brown, it's not random. Your blood communicates something every time.</p>
-          <div class="lsc-foot"><span class="lsc-time">⏱ 6 min</span></div>
+          <div class="lsc-foot"><span class="lsc-time">⏱ 8 min</span></div>
         </div>
       </article>
 
       <!-- Card: Movement day 1 -->
       <article class="lsc" onclick="openArticle(2, this)">
-        <div class="lsc-img" style="background:linear-gradient(145deg,#E4F2EB,#CEEADB,#E8F5EF)">
-          <svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="130" cy="32" r="12" stroke="#6EE7B7" stroke-width="2" fill="none" opacity=".9"/>
-            <line x1="130" y1="44" x2="130" y2="84" stroke="#6EE7B7" stroke-width="2.5" stroke-linecap="round" opacity=".9"/>
-            <line x1="130" y1="58" x2="108" y2="72" stroke="#6EE7B7" stroke-width="2.5" stroke-linecap="round" opacity=".9"/>
-            <line x1="130" y1="58" x2="154" y2="48" stroke="#6EE7B7" stroke-width="2.5" stroke-linecap="round" opacity=".9"/>
-            <line x1="130" y1="84" x2="112" y2="114" stroke="#6EE7B7" stroke-width="2.5" stroke-linecap="round" opacity=".9"/>
-            <line x1="130" y1="84" x2="152" y2="108" stroke="#6EE7B7" stroke-width="2.5" stroke-linecap="round" opacity=".9"/>
-            <line x1="82"  y1="48" x2="68"  y2="48" stroke="#6EE7B7" stroke-width="1.5" stroke-linecap="round" opacity=".35"/>
-            <line x1="80"  y1="60" x2="64"  y2="60" stroke="#6EE7B7" stroke-width="1.5" stroke-linecap="round" opacity=".22"/>
-            <line x1="78"  y1="72" x2="66"  y2="72" stroke="#6EE7B7" stroke-width="1"   stroke-linecap="round" opacity=".12"/>
-            <path d="M20,108 L48,108 L57,90 L68,126 L78,100 L86,108 L175,108" stroke="#6EE7B7" stroke-width="1.5" fill="none" opacity=".25" stroke-linecap="round"/>
-          </svg>
+        <div class="lsc-img">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&auto=format&q=90" alt="Woman doing yoga meditation" loading="lazy">
         </div>
         <div class="lsc-body">
           <span class="lsc-cat">Movement</span>
           <div class="lsc-title">Moving on day 1 of your period: brave or brilliant?</div>
           <p class="lsc-hook">The science says something most people don't expect, and it might change your worst days.</p>
-          <div class="lsc-foot"><span class="lsc-time">⏱ 6 min</span></div>
+          <div class="lsc-foot"><span class="lsc-time">⏱ 8 min</span></div>
         </div>
       </article>
 
       <!-- Card: Stress / exam week -->
       <article class="lsc" onclick="openArticle(3, this)">
-        <div class="lsc-img" style="background:linear-gradient(145deg,#FBF3E0,#F5E8C0,#FAF0D5)">
-          <svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="24" y="100" width="82" height="10" rx="2" fill="#F59E0B" opacity=".85"/>
-            <rect x="20" y="90"  width="88" height="10" rx="2" fill="#D97706" opacity=".85"/>
-            <rect x="26" y="80"  width="76" height="10" rx="2" fill="#FBB924" opacity=".85"/>
-            <rect x="22" y="70"  width="82" height="10" rx="2" fill="#F59E0B" opacity=".7"/>
-            <rect x="118" y="48" width="60" height="54" rx="5" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity=".45"/>
-            <line x1="118" y1="63" x2="178" y2="63" stroke="#F59E0B" stroke-width="1" opacity=".45"/>
-            <text x="133" y="76" font-family="sans-serif" font-size="8" fill="rgba(251,185,36,.65)">M T W</text>
-            <text x="126" y="91" font-family="sans-serif" font-size="9" fill="#F87171" opacity=".8">✕  ✕  ✕</text>
-            <text x="118" y="30" font-family="sans-serif" font-size="8" fill="#F87171" opacity=".65">CORTISOL ↑</text>
-            <path d="M24,126 Q48,116 72,126 Q96,136 120,126" stroke="#FBB924" stroke-width="1.5" fill="none" opacity=".28" stroke-linecap="round"/>
-          </svg>
+        <div class="lsc-img">
+          <img src="https://images.unsplash.com/photo-1560543685-824b3c5e82ad?w=1200&auto=format&q=90" alt="Woman studying at desk with books" loading="lazy">
         </div>
         <div class="lsc-body">
           <span class="lsc-cat">Stress</span>
           <div class="lsc-title">Exam week is secretly a cycle event</div>
           <p class="lsc-hook">Your period hears your stress. The biology is more direct than most people realise.</p>
-          <div class="lsc-foot"><span class="lsc-time">⏱ 6 min</span></div>
+          <div class="lsc-foot"><span class="lsc-time">⏱ 8 min</span></div>
         </div>
       </article>
 
       <!-- Card: Food / breakfast -->
       <article class="lsc" onclick="openArticle(4, this)">
-        <div class="lsc-img" style="background:linear-gradient(145deg,#F9E8E2,#F0D0C5,#FAE0D8)">
-          <svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="arr5" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#6EE7B7"/></linearGradient></defs>
-            <line x1="22" y1="40" x2="178" y2="40" stroke="url(#arr5)" stroke-width="1.5" opacity=".35"/>
-            <polygon points="178,40 170,36 170,44" fill="#6EE7B7" opacity=".4"/>
-            <circle cx="48"  cy="82" r="30" fill="none" stroke="#F87171" stroke-width="1.5" opacity=".3"/>
-            <circle cx="48"  cy="82" r="20" fill="#1a0808" opacity=".6"/>
-            <line x1="38" y1="72" x2="58" y2="92" stroke="#F87171" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
-            <line x1="58" y1="72" x2="38" y2="92" stroke="#F87171" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
-            <circle cx="104" cy="82" r="30" fill="none" stroke="#FB923C" stroke-width="1.5" opacity=".35"/>
-            <circle cx="104" cy="82" r="20" fill="#1a0804" opacity=".6"/>
-            <circle cx="99"  cy="79" r="5"  fill="#FB923C" opacity=".55"/>
-            <circle cx="110" cy="82" r="4"  fill="#FB923C" opacity=".4"/>
-            <circle cx="102" cy="88" r="4"  fill="#FB923C" opacity=".45"/>
-            <circle cx="160" cy="82" r="30" fill="none" stroke="#6EE7B7" stroke-width="1.5" opacity=".38"/>
-            <circle cx="160" cy="82" r="20" fill="#04100a" opacity=".6"/>
-            <circle cx="155" cy="77" r="5"  fill="#6EE7B7" opacity=".65"/>
-            <circle cx="165" cy="80" r="4"  fill="#6EE7B7" opacity=".55"/>
-            <circle cx="158" cy="87" r="5"  fill="#6EE7B7" opacity=".6"/>
-            <circle cx="168" cy="86" r="3"  fill="#6EE7B7" opacity=".45"/>
-          </svg>
+        <div class="lsc-img">
+          <img src="https://images.unsplash.com/photo-1501959915551-4e8d30928317?w=1200&auto=format&q=90" alt="Healthy breakfast bowl with fruit and yogurt" loading="lazy">
         </div>
         <div class="lsc-body">
           <span class="lsc-cat">Food</span>
           <div class="lsc-title">Skipping breakfast is messing with more than your mood</div>
-          <p class="lsc-hook">Your uterus cares about your meal schedule,  irregular eating shows up in cycle data.</p>
-          <div class="lsc-foot"><span class="lsc-time">⏱ 6 min</span></div>
+          <p class="lsc-hook">Your uterus cares about your meal schedule, irregular eating shows up in cycle data.</p>
+          <div class="lsc-foot"><span class="lsc-time">⏱ 8 min</span></div>
         </div>
       </article>
 
@@ -1751,10 +1702,110 @@ document.querySelectorAll('.r').forEach(el => revealObs.observe(el));
 /* ── Article modal ── */
 const articleData = [
   null, // 0 unused
-  { tags: ["Cycle 101","Symptoms"], title: "What your flow colour is actually telling you", body: "<p>Period blood is not one colour. It moves through shades across your period, and those shifts carry real information about what is happening in your body.</p><h3>The colour spectrum, explained</h3><p>Bright red blood means it is leaving your body quickly — it has not had time to oxidise. This is typical on heavier days. Dark red or brown blood means the opposite: it has spent more time inside the uterus. This is completely normal at the beginning and end of your period.</p><p>Pink or light red blood is simply diluted. This happens when flow is very light, which is common at the start or end of a period, or for someone who is very active.</p><h3>Colours worth noting</h3><p>Grey or greyish tissue alongside blood can signal infection in some cases and is worth mentioning to a doctor if it happens more than once. Very pale pink watery blood combined with very heavy volume is also worth flagging — this combination can sometimes indicate low iron or hormonal shifts beyond normal variation.</p><h3>Clots: normal or not?</h3><p>Small clots — no bigger than a coin — are common and not a concern. The uterus produces anticoagulants to prevent clotting, but on heavy days the flow can move faster than those anticoagulants can act. Larger clots, or clots that appear every day of your period, are worth mentioning to a doctor.</p><div class='science-box'><div class='label'>The biology</div><p>Period blood is a mix of blood, uterine lining tissue, and cervical mucus. The colour reflects how long each component has been exposed to oxygen. Darker means older. Brighter means fresher. This is normal variation, not a problem to solve.</p></div><div class='takeaway-box'><div class='label'>What to do with this</div><p>Start noticing the colour at the beginning, middle, and end of your next period. Changes from your personal normal are more informative than any single colour reading.</p></div>" },
-  { tags: ["Movement","Pain"], title: "Moving on day 1 of your period: brave or brilliant?", body: "<p>Most people grow up hearing some version of \"rest when you have your period.\" Rest is genuinely useful on days when symptoms are severe. But the idea that movement makes period pain worse is not backed by evidence. In most cases, it is the opposite.</p><h3>What movement does to cramp pain</h3><p>Menstrual cramps are caused by prostaglandins — hormone-like substances that make your uterine muscle contract. When you move, even gently, your body releases endorphins. These are natural pain-modulating compounds that reduce how intensely pain signals register.</p><p>Movement also increases blood circulation to the pelvis. Cramping is partly caused by the uterine muscle contracting so hard that oxygen delivery is temporarily reduced. Gentle movement counteracts this by improving blood flow.</p><h3>What kind of movement helps</h3><p>The research does not point to one specific type. Walking, yoga, and light aerobic movement have all shown benefits. The key word is gentle to moderate. A 15 to 20 minute walk at a comfortable pace is genuinely enough to make a measurable difference for many people.</p><h3>When rest is the right call</h3><p>If your pain is severe — if walking feels genuinely impossible, or if OTC pain relief is not touching it — that is important information, not weakness. Severe pain unresponsive to standard pain relief is a medical referral trigger, not a reason to push harder.</p><div class='science-box'><div class='label'>What the research found</div><p>A review of 29 randomised controlled trials found that all types of exercise — yoga, aerobics, strength training — significantly reduced menstrual pain compared to no exercise. Even single-session movement showed acute pain-reducing effects in several studies.</p></div><div class='takeaway-box'><div class='label'>Try this next cycle</div><p>On day 1 or 2 of your next period, if symptoms are manageable, try a 15-minute gentle walk. Log your pain level before and 30 minutes after.</p></div>" },
-  { tags: ["Stress","Cycle 101"], title: "Exam week is secretly a cycle event", body: "<p>Your period is late. Your skin broke out. Your PMS hit harder than usual. You had exams three weeks ago and forgot to count them as a health event. You should have.</p><h3>The HPA axis: the biology your syllabus skipped</h3><p>When your brain registers stress — a deadline, an argument, three hours of sleep before a paper — it activates a chain of hormonal signals called the HPA axis. This ends with the release of cortisol, which is useful in short bursts but disruptive when sustained.</p><p>One of cortisol's effects is to suppress GnRH — the signal your brain sends to start the hormonal cascade that runs your cycle. When GnRH is suppressed, ovulation can be delayed or skipped, making your period late and changing the timing of every phase that follows.</p><h3>The academic stress effect</h3><p>Studies specifically looking at female students found that nearly half of participants experienced irregular cycles during high-stress academic periods. The effect was strong enough to appear in research even when researchers controlled for sleep and diet changes — meaning stress itself was affecting cycles.</p><div class='science-box'><div class='label'>The data behind this</div><p>A systematic review of 41 studies found that 88.5% of them reported a significant association between psychological stress and menstrual dysfunction. Stress was associated with irregular cycles, missed periods, worse PMS, and greater pain across age groups and geographies.</p></div><div class='takeaway-box'><div class='label'>What this means practically</div><p>When you notice your cycle behaving unusually, look back three to five weeks — not just the days immediately before. Logging your daily stress level in Marea over several cycles will show you your own stress–cycle relationship over time.</p></div>" },
-  { tags: ["Food","Cycle 101"], title: "Skipping breakfast is messing with more than your mood", body: "<p>Irregular eating does not just affect your energy. It sends signals to the hormonal systems that regulate your cycle. And for teenage girls specifically, the effect is significant enough to show up in research.</p><h3>Your body reads meal skipping as stress</h3><p>When you go without food for extended periods, your body registers a form of low-level stress. This activates the same cortisol response that delays ovulation. But meal timing also affects leptin — a hormone that communicates directly with the hypothalamus about energy availability and helps maintain the hormonal cascade that drives your cycle.</p><h3>The fast food and irregularity connection</h3><p>A large study of Korean adolescent girls found a statistically significant association between frequent fast food consumption and menstrual irregularity. The connection appeared to be driven by dietary pattern rather than any single nutrient — eating consistently mattered more than what you eat at any individual meal.</p><h3>Iron is the thing most teen girls are not thinking about</h3><p>Heavy periods deplete iron. Low iron causes fatigue and worsens period symptoms. Around 40% of teenage girls are estimated to have some degree of iron deficiency. Heavy periods combined with limited iron intake is a pattern worth discussing with a doctor.</p><div class='science-box'><div class='label'>What the evidence says</div><p>The Korean NHANES study of 463 adolescents found significant associations between fast food consumption frequency and menstrual irregularity. Anti-inflammatory dietary patterns have also shown benefit for period-related symptoms in multiple observational studies.</p></div><div class='takeaway-box'><div class='label'>One small thing</div><p>If you regularly skip meals, try adding one small consistent meal for two weeks before your next period. Not a perfect meal — just something. Notice whether your energy during your period feels different.</p></div>" }
+  {
+    tags: ["Cycle 101","Symptoms"],
+    title: "What your flow colour is actually telling you",
+    body: `<p>Your period is not one event. It is a sequence. And one of the clearest signals within that sequence is colour — which shifts from start to finish in ways that carry real information about what is happening inside your body.</p>
+
+<h3>Why colour changes at all</h3>
+<p>Period blood is not pure blood. It is a combination of blood, shed uterine lining, cervical mucus, and vaginal secretions. The colour you see depends heavily on how long each component has been in contact with oxygen — a process called oxidation. Fresh blood exposed to minimal oxygen appears bright red. Blood that has pooled and spent more time in the uterine cavity before leaving oxidises into darker shades of red, brown, or near-black.</p>
+<p>The speed of your flow is what controls this. On heavier days, blood moves through quickly and stays bright. On lighter days, slower flow gives blood more time to oxidise before leaving the body. This is why most people see brighter red in the middle of their period and darker shades at the beginning or end.</p>
+
+<h3>The full colour spectrum</h3>
+<p><strong>Bright red:</strong> Fresh, fast-moving blood. Common on days 2 and 3 for most people. Normal and expected on heavier flow days.</p>
+<p><strong>Dark red or maroon:</strong> Slightly older blood moving more slowly. Typical at the very start of a period when flow has not yet reached its heaviest, or on lighter final days.</p>
+<p><strong>Brown or rust:</strong> Oxidised blood that has spent longer in the uterine cavity. Very common at the beginning and end of a period, and in light spotting before a period starts. Not a sign of anything wrong.</p>
+<p><strong>Light pink or pale rose:</strong> Diluted blood. This appears when flow is very light and blood mixes with a higher proportion of cervical mucus. Common at the very tail end, in the first hour of spotting, or mid-cycle if ovulation bleeding occurs.</p>
+<p><strong>Orange-tinged:</strong> Can appear similar to light brown but with a more yellow-orange quality. Occasionally normal at the very start of a period, but orange blood combined with an unusual odour may warrant a check for bacterial vaginosis or infection.</p>
+
+<h3>Clots — when they are normal and when they are not</h3>
+<p>Small clots, roughly the size of a coin or smaller, are a normal part of heavy flow days. The uterus produces natural anticoagulants to prevent clotting, but when flow is very heavy, blood can move faster than those anticoagulants can work. The result is small clots, which are physiology doing its job rather than a problem.</p>
+<p>Larger clots — consistently bigger than a 10p coin, or appearing on multiple days per period — are worth documenting and discussing with a doctor. Conditions including uterine fibroids, adenomyosis, and hormonal imbalances can produce heavier flow with significant clotting.</p>
+
+<h3>Colours worth flagging</h3>
+<p>Grey or greyish discharge combined with blood can indicate bacterial vaginosis or infection. If this appears alongside an unusual smell, a healthcare appointment is appropriate. Bright red bleeding that continues beyond eight days, or that saturates a pad within an hour consistently, should also be mentioned to a doctor — not because it is always serious, but because heavy periods can silently cause iron deficiency anaemia over time without obvious warning.</p>
+
+<div class='science-box'><div class='label'>The biology</div><p>The brown colour in older period blood comes primarily from methemoglobin — a form of haemoglobin where the iron has oxidised. Haemoglobin also degrades into biliverdin and then bilirubin as it ages. The longer blood sits in the uterine cavity before exiting, the more completely this oxidation process runs, producing darker colours. This is chemistry, not pathology.</p></div>
+
+<div class='takeaway-box'><div class='label'>What to track</div><p>For two cycles, note the colour on each day — beginning, middle, and end of your period. Most people find a consistent personal pattern. Shifts from your own baseline are more meaningful than any single reading compared to a general chart.</p></div>`
+  },
+  {
+    tags: ["Movement","Pain"],
+    title: "Moving on day 1 of your period: brave or brilliant?",
+    body: `<p>The received wisdom is clear: rest when you have your period. Rest is genuinely useful when symptoms are severe. But the blanket idea that movement makes period pain worse is not supported by evidence. For most people with manageable symptoms, gentle movement on the first day of a period is not just safe — it actively helps.</p>
+
+<h3>Where period cramps come from</h3>
+<p>Menstrual cramps — primary dysmenorrhoea — are caused by prostaglandins. These are lipid compounds produced by the uterine lining as it prepares to shed. Prostaglandins trigger uterine muscle contractions strong enough to expel the lining. High prostaglandin levels are associated with more intense contractions, restricted blood flow to the uterine muscle, and greater pain sensation.</p>
+<p>The restricted blood flow is the key piece. When a muscle contracts repeatedly and intensely without adequate oxygen — a state called ischaemia — it generates pain. The uterine muscle contracting against reduced blood supply is precisely what creates the cramping sensation. It is the same mechanism as a muscle cramp anywhere else in the body, just happening in an organ you cannot see.</p>
+
+<h3>What movement does to this mechanism</h3>
+<p>Physical activity drives two changes that directly work against this process. First, it stimulates the release of endorphins — natural analgesic compounds that reduce pain signal intensity throughout the body. This effect is not metaphorical. Endorphins bind to opioid receptors and genuinely dampen how intensely pain registers.</p>
+<p>Second, movement increases cardiovascular output and improves blood flow to peripheral and pelvic tissues. More blood reaching the uterine muscle during contractions means more oxygen delivery, which reduces the ischaemic component of cramping. Even a gentle walk is sufficient to produce measurable increases in pelvic circulation.</p>
+
+<h3>What the research actually shows</h3>
+<p>Multiple randomised controlled trials have compared exercise to no exercise for primary dysmenorrhoea, and the results consistently favour movement. A systematic review and meta-analysis of 12 trials found that exercise significantly reduced menstrual pain intensity compared to sedentary control groups. A broader review covering 29 trials found benefits across yoga, aerobics, and resistance training — not one specific modality. Crucially, these effects appeared in both same-session and longer-term outcomes across cycles.</p>
+<p>Even low-intensity activity sustained for as little as 15 minutes showed pain-reducing effects in several studies. The threshold for benefit is low. You do not need a structured gym session to get the effect.</p>
+
+<h3>Types of movement worth trying</h3>
+<p>Yoga has been studied most extensively for dysmenorrhoea specifically. Child's pose, supine twists, and gentle forward folds appear to reduce pelvic tension and support parasympathetic nervous system activation — the state that counters the stress response your body can mount during painful periods. Walking is the most accessible option and has consistent evidence. Light aerobic activity at a conversational intensity works too. The common thread is that movement is gentle enough to sustain, not intense enough to add additional physiological stress.</p>
+<p>High-intensity training on day 1, when the body is already managing an inflammatory process, is a separate question from whether movement helps at all. For most people, matching intensity to how their body actually feels that day produces better outcomes than either forcing a hard session or avoiding all activity.</p>
+
+<h3>When rest is right</h3>
+<p>Severe primary dysmenorrhoea — pain that prevents normal function, does not respond to over-the-counter pain relief, or comes with vomiting or fainting — is not something to exercise through. That level of pain is a medical referral trigger. It can indicate conditions like endometriosis that warrant investigation and treatment. If that is your situation, the goal is diagnosis, not a 20-minute walk.</p>
+
+<div class='science-box'><div class='label'>Key research finding</div><p>A systematic review of 29 randomised trials found that all forms of exercise — including yoga, aerobic movement, and stretching — produced statistically significant reductions in menstrual pain compared to no exercise. The pain reduction was clinically meaningful, not a marginal statistical effect. Benefits appeared both within single sessions and across cycles when exercise was maintained.</p></div>
+
+<div class='takeaway-box'><div class='label'>Try this</div><p>On your next day 1 or day 2, if symptoms are manageable, note your pain level on a scale of 1 to 10. Take a 15 to 20 minute gentle walk. Note your pain level again 30 minutes after. Most people find a measurable difference. Track it in Marea across two or three cycles to see your own personal pattern emerge.</p></div>`
+  },
+  {
+    tags: ["Stress","Cycle 101"],
+    title: "Exam week is secretly a cycle event",
+    body: `<p>Your cycle ended later than expected. Your skin did something it does not usually do. Your cramps were worse this month than last. If you had a high-pressure deadline or exam period three to five weeks ago, those events may be directly connected — even though by now they feel completely unrelated.</p>
+
+<h3>The hormonal chain that stress disrupts</h3>
+<p>Your menstrual cycle is governed by a hormonal cascade that begins in the brain. The hypothalamus releases gonadotropin-releasing hormone (GnRH) in regular pulses. GnRH signals the pituitary gland to release follicle-stimulating hormone (FSH) and luteinising hormone (LH), which then drive follicle development and trigger ovulation. The timing of every phase that follows — including when your period arrives — depends on this chain running on schedule.</p>
+<p>When psychological stress is significant or sustained, the body activates the HPA axis — the hypothalamic-pituitary-adrenal axis. This system releases cortisol as part of a survival-oriented physiological response. One direct effect of elevated cortisol is suppression of GnRH pulse frequency. When GnRH pulses are disrupted, the downstream FSH and LH signals are also disrupted. The result can be delayed ovulation, an altered follicular phase, or in cases of prolonged severe stress, a missed ovulation and a late period.</p>
+
+<h3>Why exam stress specifically is so effective at this</h3>
+<p>Academic stress has characteristics that make it particularly disruptive to the cycle. It is sustained over days or weeks rather than hours. It involves significant sleep disruption — and sleep deprivation independently elevates cortisol. It often coincides with irregular eating. And it involves psychological anticipation and rumination, which maintains cortisol elevation even when the active stressor is not present. The system stays switched on even between study sessions.</p>
+<p>Research looking specifically at student populations has found that major academic deadlines correlate with menstrual cycle changes in a meaningful proportion of participants. One study of 109 undergraduate women found that stress scores during exam periods correlated significantly with reports of late or disrupted cycles in the weeks that followed — even after controlling for other lifestyle variables.</p>
+
+<h3>The cortisol and progesterone relationship</h3>
+<p>There is a second mechanism at work beyond GnRH suppression. Cortisol and progesterone share a precursor molecule called pregnenolone. Under high adrenal demand, pregnenolone may be preferentially directed toward cortisol synthesis. This can reduce progesterone production in the luteal phase — the second half of your cycle. Lower luteal progesterone is associated with worse PMS symptoms, a shorter luteal phase, and spotting before your period formally begins.</p>
+<p>This is sometimes referred to as the pregnenolone steal mechanism. Its quantitative significance in healthy individuals is still being studied, but it provides a plausible explanation for why sustained high-stress periods affect cycle quality — not just timing — over the weeks that follow.</p>
+
+<h3>The lag that makes this hard to see</h3>
+<p>This is the piece most people miss entirely: the effect of stress on your period shows up weeks after the stressful period ended. If you were under significant pressure during week 3 of your cycle — around when ovulation should occur — you may not notice the consequence until week 5 or 6, when your period arrives late or behaves differently. By that point, it is easy to look at the wrong week for an explanation.</p>
+
+<div class='science-box'><div class='label'>Research overview</div><p>A systematic review of 41 studies examining psychological stress and menstrual function found that 88.5% reported a significant association between the two. Reported effects included delayed periods, skipped ovulation, shortened luteal phases, increased cramping, and amplified PMS. The relationship was consistent across diverse populations and geographic regions.</p></div>
+
+<div class='takeaway-box'><div class='label'>What to log</div><p>When you notice your cycle behaving unusually, open your Marea log and look back three to five weeks. Note what your stress level was during that window. Over several cycles, you will start to see your personal stress-to-cycle lag — which is different for each person — and can begin planning around high-pressure periods with that pattern as context.</p></div>`
+  },
+  {
+    tags: ["Food","Cycle 101"],
+    title: "Skipping breakfast is messing with more than your mood",
+    body: `<p>The link between food and your cycle is more direct than most nutrition advice acknowledges. Meal timing and dietary patterns do not just affect energy levels — they send signals to the hormonal systems that regulate whether your cycle runs on schedule at all.</p>
+
+<h3>What your body reads as an energy crisis</h3>
+<p>The hypothalamus — the region of the brain that drives your cycle — continuously monitors your body's energy state. It uses hormonal signals, particularly leptin and ghrelin, as proxies for whether adequate energy is available to sustain reproduction. Leptin, produced by fat tissue, signals satiety and energy sufficiency. Ghrelin, produced in the stomach, signals hunger and energy deficit.</p>
+<p>When meals are skipped or eating is chronically irregular, leptin levels fall and ghrelin rises. The hypothalamus reads this combination as energy shortage. In response, it can reduce the intensity and regularity of the GnRH pulse that drives the entire hormonal cascade of your cycle. From an evolutionary standpoint this is logical — reproduction is energetically expensive, and the body is designed to suppress it when it perceives resources as inadequate. From a practical standpoint, it means that chronic meal skipping can affect cycle regularity even without dramatic changes in weight.</p>
+
+<h3>Blood sugar, cortisol, and the morning window</h3>
+<p>Skipping breakfast after an overnight fast creates significant blood sugar drops in the morning. The body responds to low blood sugar by releasing cortisol to stimulate glucose production from stored glycogen. This is a normal short-term mechanism. But the cortisol released in response to low blood sugar adds to whatever baseline stress load already exists, feeding directly into the cycle-disrupting pathway described above.</p>
+<p>Eating breakfast does not need to be complex to interrupt this pattern. The research does not identify a specific ideal breakfast composition for cycle health. The more meaningful variable appears to be consistency — eating something within a reasonable window of waking, regularly, to maintain blood sugar stability and prevent the morning cortisol spike that follows an extended fast.</p>
+
+<h3>What the research found in adolescent girls</h3>
+<p>The relationship between dietary pattern and cycle regularity has been studied specifically in teenage girls, who are in the period of cycle establishment where some irregularity is already common. A large study of Korean adolescent girls found a statistically significant association between frequent fast food consumption and menstrual irregularity. The association held after adjusting for BMI, exercise levels, and sleep — pointing to dietary pattern quality as an independent variable rather than a proxy for other health behaviours.</p>
+<p>Separately, anti-inflammatory dietary patterns have shown benefits for dysmenorrhoea in observational research. Omega-3-rich foods, leafy greens, and lower processed food intake have each been associated with reduced period pain scores in population studies. These effects are modest in isolation but meaningful across an overall dietary pattern.</p>
+
+<h3>Iron: the often-missed piece</h3>
+<p>Heavy periods and iron deficiency form a feedback loop that many people enter without realising. Menstruation is the leading cause of iron deficiency in people who menstruate. Iron deficiency causes fatigue, reduced concentration, and worsened mood — symptoms that are often attributed to periods being "just like this" rather than a correctable deficiency. But iron deficiency also affects energy metabolism and can worsen period experience across cycles.</p>
+<p>Approximately 30–40% of adolescent girls are estimated to have some degree of iron deficiency or iron deficiency anaemia globally. Iron-rich foods — red meat, legumes, dark leafy greens — combined with vitamin C (which enhances absorption) help close the gap. If periods are heavy, a ferritin blood test is worth requesting from a doctor. Checking ferritin specifically matters because iron stores deplete well before anaemia becomes visible on a standard haemoglobin test.</p>
+
+<div class='science-box'><div class='label'>Research finding</div><p>A 2020 study of 463 Korean adolescent girls found that those who consumed fast food three or more times per week had significantly higher rates of menstrual irregularity compared to those with low consumption. The effect persisted after statistical adjustment for BMI, exercise frequency, and sleep duration — suggesting dietary pattern quality operates as an independent variable on cycle regularity, not simply as a marker for other lifestyle factors.</p></div>
+
+<div class='takeaway-box'><div class='label'>Start here</div><p>If you regularly skip breakfast, try one week of adding a small consistent morning meal — anything — within an hour of waking. If your periods are heavy, ask your doctor to check your ferritin levels alongside your haemoglobin. Log your energy and mood in Marea across your next two cycles alongside your meal timing. The connection often becomes visible within a few months of consistent tracking.</p></div>`
+  }
 ];
 
 function openArticle(idx, cardEl) {
