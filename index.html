@@ -580,7 +580,7 @@ nav.solid {
    ============================================================ */
 #ch-learn {
   background: var(--off-white);
-  padding: 5rem 6vw 6rem;
+  padding: 3rem 6vw 6rem;
   position: relative; overflow: hidden;
 }
 
@@ -612,7 +612,7 @@ nav.solid {
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .lsc-img svg { width: 62%; height: auto; }
-.lsc-img img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background: #f5ede8; }
+.lsc-img img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
 .lsc-body { padding: 1rem 1.1rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
 .lsc-cat {
   display: inline-block; align-self: flex-start; font-size: .58rem; text-transform: uppercase;
@@ -1053,7 +1053,7 @@ footer {
   border-radius: 20px 20px 0 0;
 }
 .am-hero svg { width: 100%; height: 100%; }
-.am-hero img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; position: absolute; top: 0; left: 0; background: #f5ede8; }
+.am-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; position: absolute; top: 0; left: 0; }
 .am-back {
   position: absolute;
   top: 12px;
@@ -1449,7 +1449,7 @@ footer {
       <!-- Card: Flow colour -->
       <article class="lsc" onclick="openArticle(1, this)">
         <div class="lsc-img">
-          <img src="https://images.unsplash.com/photo-1567013514336-6de53c9e7e63?w=1200&auto=format&q=90" alt="Woman in wellness pose" loading="lazy">
+          <img src="assets/images/article1.jpg" alt="Woman in warm red light" loading="lazy">
         </div>
         <div class="lsc-body">
           <span class="lsc-cat">Cycle 101</span>
@@ -1462,7 +1462,7 @@ footer {
       <!-- Card: Movement day 1 -->
       <article class="lsc" onclick="openArticle(2, this)">
         <div class="lsc-img">
-          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&auto=format&q=90" alt="Woman doing yoga meditation" loading="lazy">
+          <img src="assets/images/article2.jpg" alt="Woman doing yoga meditation" loading="lazy">
         </div>
         <div class="lsc-body">
           <span class="lsc-cat">Movement</span>
@@ -1475,7 +1475,7 @@ footer {
       <!-- Card: Stress / exam week -->
       <article class="lsc" onclick="openArticle(3, this)">
         <div class="lsc-img">
-          <img src="https://images.unsplash.com/photo-1560543685-824b3c5e82ad?w=1200&auto=format&q=90" alt="Woman studying at desk with books" loading="lazy">
+          <img src="assets/images/article3.jpg" alt="Woman writing in notebook by window" loading="lazy">
         </div>
         <div class="lsc-body">
           <span class="lsc-cat">Stress</span>
@@ -1488,7 +1488,7 @@ footer {
       <!-- Card: Food / breakfast -->
       <article class="lsc" onclick="openArticle(4, this)">
         <div class="lsc-img">
-          <img src="https://images.unsplash.com/photo-1501959915551-4e8d30928317?w=1200&auto=format&q=90" alt="Healthy breakfast bowl with fruit and yogurt" loading="lazy">
+          <img src="assets/images/article4.jpg" alt="Healthy breakfast bowl with fruit and yogurt" loading="lazy">
         </div>
         <div class="lsc-body">
           <span class="lsc-cat">Food</span>
@@ -1818,7 +1818,9 @@ function openArticle(idx, cardEl) {
   document.getElementById('am-tags').innerHTML = a.tags.map(t => `<span class="am-tag">${t}</span>`).join('');
   document.getElementById('am-title').textContent = a.title;
   document.getElementById('am-body').innerHTML = a.body;
-  document.getElementById('article-modal').classList.add('open');
+  const modal = document.getElementById('article-modal');
+  modal.scrollTop = 0;
+  modal.classList.add('open');
   document.getElementById('article-modal-backdrop').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
