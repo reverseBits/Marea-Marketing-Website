@@ -166,7 +166,7 @@ footer {
 <div class="page-wrap">
 
   <h1 class="page-title">Privacy Policy</h1>
-  <p class="page-meta">Effective Date: May 27, 2026 &nbsp;·&nbsp; Last Updated: May 27, 2026</p>
+  <p class="page-meta">Effective Date: June 9, 2026 &nbsp;&nbsp;|&nbsp;&nbsp; Last Updated: June 9, 2026</p>
 
   <section class="policy-section" id="overview">
     <h2>1. Overview</h2>
@@ -181,13 +181,19 @@ footer {
     <h3>Data you enter into the App</h3>
     <p>Marea stores data you provide locally on your device, including:</p>
     <ul>
-      <li>Cycle start and end dates</li>
+      <li>Cycle start and end dates, cycle length, and period duration</li>
       <li>Flow intensity logs</li>
       <li>Symptom and mood entries</li>
-      <li>Notes and custom reminders</li>
+      <li>Daily notes</li>
+      <li>Habit logs</li>
+      <li>Streak count</li>
+      <li>Notification preferences and reminder times (stored locally)</li>
     </ul>
     <p>Menstrual and reproductive health data constitutes <strong>sensitive personal data</strong> under Indian law. Marea treats all data you enter with the highest level of protection.</p>
     <p><strong>This data never leaves your device.</strong> It is not uploaded to any server, not shared with any third party, and not accessible to us or anyone else.</p>
+
+    <h3>Notification permission</h3>
+    <p>Marea requests permission to send notifications solely to deliver cycle reminders and daily log reminders that you configure within the App. Notification scheduling is handled entirely on your device. No notification content or delivery data is transmitted off your device.</p>
 
     <h3>Data we do NOT collect</h3>
     <ul>
@@ -216,28 +222,35 @@ footer {
 
   <section class="policy-section" id="data-storage">
     <h2>4. Data Storage &amp; Security</h2>
-    <p>All data is stored in the local database on your device, managed by the operating system's secure storage APIs. Your data is protected by:</p>
+    <p>All data is stored in the App's private data directory on your device, accessible only to Marea via the operating system's app sandboxing. Your data is protected by:</p>
     <ul>
       <li>Your device's screen lock and biometric authentication</li>
-      <li>The operating system's app sandboxing (iOS &amp; Android)</li>
-      <li>No network transmission - data cannot be intercepted in transit</li>
+      <li>The operating system's app sandboxing (iOS and Android), which prevents other apps from accessing Marea's data</li>
+      <li>No network transmission; data is never sent over the internet or any external connection</li>
     </ul>
     <p>We recommend keeping your device up to date and using a screen lock to protect all apps, including Marea.</p>
 
+    <h3>Cloud backup exclusion</h3>
+    <p>Marea explicitly disables OS-level cloud backup on both Android (Google Auto Backup) and iOS (iCloud Backup). Your health data is never backed up to any cloud service by the operating system, even if you have cloud backup enabled globally on your device.</p>
+
     <h3>Data retention</h3>
-    <p>Data is retained on your device until you delete it within the App, clear the App's storage via device settings, or uninstall the App. Uninstalling Marea <strong>permanently and irreversibly</strong> deletes all your data.</p>
+    <p>Data is retained on your device until you clear the App's storage via device settings or uninstall the App. Uninstalling Marea <strong>permanently and irreversibly</strong> deletes all your data. We hold no copy of your data anywhere.</p>
   </section>
 
   <section class="policy-section" id="third-parties">
     <h2>5. Third-Party Services</h2>
-    <p>Marea does <strong>not</strong> integrate any third-party SDKs, analytics services, advertising networks, or cloud providers. We do not share, sell, or license your data to any third party, because we never have access to it in the first place.</p>
+    <p>Marea does <strong>not</strong> integrate analytics services, advertising networks, or cloud data providers. We do not share, sell, or license your data to any third party, because we never have access to it in the first place.</p>
+
+    <h3>Local notifications (flutter_local_notifications)</h3>
+    <p>Marea uses the <code>flutter_local_notifications</code> library to schedule and deliver reminders on your device. This library operates entirely offline and makes no network requests. No notification content or timing data leaves your device.</p>
+
     <p>The App does not contain links to external websites and does not make network requests.</p>
   </section>
 
   <section class="policy-section" id="children">
     <h2>6. Children's Privacy</h2>
     <p>Marea is designed for users aged <strong>13 and above</strong>. Users between the ages of 13 and 17 should use the App with parental awareness and guidance.</p>
-    <p>Under the Digital Personal Data Protection Act 2023, a "child" means any person under 18 years of age, and processing their personal data ordinarily requires verifiable parental consent. However, since Marea collects no personal data from any user — all data is stored only on your device and never transmitted to us — the parental consent obligations under the DPDP Act 2023 are not triggered.</p>
+    <p>Under the Digital Personal Data Protection Act 2023, a "child" means any person under 18 years of age, and processing their personal data ordinarily requires verifiable parental consent. However, since Marea collects no personal data from any user (all data is stored only on your device and never transmitted to us), the parental consent obligations under the DPDP Act 2023 are not triggered.</p>
     <p>We do not knowingly collect any personal information from users of any age. There is no risk of inadvertent data collection from minors as the App operates entirely offline with no server communication.</p>
   </section>
 
@@ -246,7 +259,7 @@ footer {
     <p>Because Marea does not collect or store any data on our servers, most traditional data-subject rights (access, portability, rectification) are exercised entirely by you, on your own device.</p>
 
     <h3>Access your data</h3>
-    <p>Open Marea — all data is visible and accessible to you at any time within the App.</p>
+    <p>Open Marea. All your data is visible and accessible to you at any time within the App.</p>
 
     <h3>Delete your data</h3>
     <p>You can delete all your data at once by uninstalling the App. Uninstalling permanently removes everything from your device. See our <a href="data-deletion.html">Data Deletion page</a> for step-by-step instructions.</p>
@@ -254,13 +267,13 @@ footer {
     <h3>Under Indian Law (DPDP Act, 2023)</h3>
     <p>Under the Digital Personal Data Protection Act 2023, you have the following rights as a Data Principal:</p>
     <ul>
-      <li><strong>Right to access</strong> — view all your data directly within the App at any time.</li>
-      <li><strong>Right to correction</strong> — edit or update your data within the App.</li>
-      <li><strong>Right to erasure</strong> — delete all your data by uninstalling the App or via in-app delete options.</li>
-      <li><strong>Right to withdraw consent</strong> — since Marea requires no consent to collect data (none is collected), you may simply uninstall the App to cease all use.</li>
-      <li><strong>Right to nominate</strong> — you may nominate another individual to exercise your data rights on your behalf in the event of your death or incapacity. Contact us at the address below to register a nominee.</li>
-      <li><strong>Right to grievance redressal</strong> — raise a complaint with our Grievance Officer (see below). We will acknowledge within 48 hours and resolve within a reasonable time.</li>
-      <li><strong>Right to approach the Data Protection Board</strong> — if your grievance is not resolved to your satisfaction, you may file a complaint with the Data Protection Board of India.</li>
+      <li><strong>Right to access:</strong> view all your data directly within the App at any time.</li>
+      <li><strong>Right to correction:</strong> edit or update your data within the App.</li>
+      <li><strong>Right to erasure:</strong> delete all your data by uninstalling the App or via in-app delete options.</li>
+      <li><strong>Right to withdraw consent:</strong> since Marea requires no consent to collect data (none is collected), you may simply uninstall the App to cease all use.</li>
+      <li><strong>Right to nominate:</strong> you may nominate another individual to exercise your data rights on your behalf in the event of your death or incapacity. Contact us at the address below to register a nominee.</li>
+      <li><strong>Right to grievance redressal:</strong> raise a complaint with our Grievance Officer (see below). We will acknowledge within 48 hours and resolve within a reasonable time.</li>
+      <li><strong>Right to approach the Data Protection Board:</strong> if your grievance is not resolved to your satisfaction, you may file a complaint with the Data Protection Board of India.</li>
     </ul>
     <p>Since Marea processes all data locally and we hold none of your data on servers, most rights are exercised directly through the App.</p>
 
@@ -268,7 +281,7 @@ footer {
     <p>For any privacy grievances or data-related requests under the DPDP Act, contact our Grievance Officer:</p>
     <p><strong>Grievance Officer, Marea</strong><br>
     Email: <a href="mailto:hello@trackwithmarea.com">hello@trackwithmarea.com</a><br>
-    Acknowledgment: within 48 hours &nbsp;·&nbsp; Resolution: within a reasonable time as per applicable law</p>
+    Acknowledgment: within 48 hours. Resolution: within a reasonable time as per applicable law.</p>
   </section>
 
   <section class="policy-section" id="changes">
