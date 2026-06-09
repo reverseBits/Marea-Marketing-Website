@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Data Deletion | Marea</title>
+<meta name="description" content="How to delete your Marea data. All data is stored locally on your device, no accounts, no servers." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --off-white:  #FFFAF6;
+  --cream:      #F5EFE8;
+  --rose:       #A76262;
+  --rose-dark:  #7A4545;
+  --rose-pale:  #F0E0E0;
+  --deep:       #1C0F0F;
+  --text:       #2C1A1A;
+  --text-sub:   #6B4A4A;
+  --text-muted: #7A6060;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overscroll-behavior: none; }
+body {
+  background: #fff;
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 6vw;
+  background: rgba(255,250,246,.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(167,98,98,.1);
+}
+.nav-logo { display: flex; align-items: center; gap: 7px; text-decoration: none; }
+.nav-wordmark {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600; font-size: 1.3rem;
+  color: var(--rose-dark); letter-spacing: .04em;
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+.nav-links a {
+  text-decoration: none; font-size: .875rem;
+  color: var(--text-sub); font-weight: 400; transition: color .2s;
+}
+.nav-links a:hover { color: var(--rose-dark); }
+@media (max-width: 640px) { .nav-links { display: none; } }
+
+/* PAGE */
+.page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8rem 6vw 5rem;
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--deep);
+  margin-bottom: .4rem;
+}
+.page-meta {
+  font-size: .85rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rose-pale);
+}
+
+/* SECTIONS */
+.policy-section { margin-bottom: 2.5rem; }
+
+.policy-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--rose-dark);
+  margin-bottom: .6rem;
+  margin-top: 2rem;
+}
+
+.policy-section p {
+  font-size: 1rem;
+  color: var(--text-sub);
+  margin-bottom: .7rem;
+}
+
+.policy-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.2rem 0 .3rem;
+}
+
+.policy-section ul, .policy-section ol {
+  padding-left: 1.4rem;
+  margin-bottom: .8rem;
+}
+
+.policy-section ul { list-style: disc; }
+
+.policy-section ol {
+  list-style: none;
+  counter-reset: ol-counter;
+  padding-left: 0;
+}
+.policy-section ol li {
+  counter-increment: ol-counter;
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+}
+.policy-section ol li::before {
+  content: counter(ol-counter) ".";
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--rose-dark);
+  flex-shrink: 0;
+  min-width: 1.2rem;
+}
+
+.policy-section li {
+  font-size: 1rem;
+  color: var(--text-sub);
+  padding: .15rem 0;
+}
+
+.policy-section a {
+  color: var(--rose-dark);
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background: var(--cream);
+  border-top: 1px solid rgba(167,98,98,.12);
+  padding: 2.5rem 6vw;
+  text-align: center;
+}
+.footer-inner { max-width: 720px; margin: 0 auto; }
+.footer-brand {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600; font-size: 1.1rem;
+  color: var(--rose-dark); letter-spacing: .04em;
+  margin-bottom: .5rem;
+}
+.footer-links {
+  display: flex; justify-content: center; gap: 1.5rem;
+  list-style: none; margin-bottom: .8rem;
+}
+.footer-links a {
+  font-size: .85rem; color: var(--text-muted);
+  text-decoration: none; transition: color .2s;
+}
+.footer-links a:hover { color: var(--rose-dark); }
+.footer-copy { font-size: .8rem; color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg height="22" viewBox="175 428 705 157" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:auto;display:block">
+      <g transform="translate(109.5, 397.0) scale(1.15)">
+        <path d="M 70,150 C 110,150 135,100 165,100 S 210,150 235,150 C 280,150 315,70 358,70 S 405,150 430,150 C 475,150 535,102 590,70 C 610,60 625,54 630,52" fill="none" stroke="#7A4545" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="650" cy="46" r="13" fill="#7A4545"/>
+      </g>
+    </svg>
+    <span class="nav-wordmark">Marea</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <li><a href="data-deletion.html" style="color:var(--rose-dark);font-weight:600;">Data Deletion</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <h1 class="page-title">Data Deletion</h1>
+  <p class="page-meta">Last Updated: June 9, 2026</p>
+
+  <section class="policy-section" id="overview">
+    <h2>1. How Your Data Is Stored</h2>
+    <p>Marea is a fully offline app. <strong>All your data is stored only on your device.</strong> We do not have servers, accounts, or cloud storage. There is no data held by us to request deletion of; everything lives on your phone.</p>
+    <p>Deleting your data is entirely in your hands and takes effect immediately.</p>
+  </section>
+
+  <section class="policy-section" id="android">
+    <h2>2. Delete Data on Android</h2>
+
+    <h3>Option A: Clear app storage (keeps the app installed)</h3>
+    <ol>
+      <li>Open your phone's <strong>Settings</strong></li>
+      <li>Go to <strong>Apps</strong> (or <strong>Application Manager</strong>)</li>
+      <li>Find and tap <strong>Marea</strong></li>
+      <li>Tap <strong>Storage</strong></li>
+      <li>Tap <strong>Clear Storage</strong> (or <strong>Clear Data</strong>)</li>
+      <li>Confirm when prompted. All your cycle data, logs, and settings are permanently deleted.</li>
+    </ol>
+
+    <h3>Option B: Uninstall the app</h3>
+    <ol>
+      <li>Long-press the <strong>Marea</strong> app icon on your home screen or app drawer</li>
+      <li>Tap <strong>Uninstall</strong> (or drag to the Uninstall area)</li>
+      <li>Confirm. The app and all its data are permanently deleted.</li>
+    </ol>
+    <p>Alternatively: <strong>Settings → Apps → Marea → Uninstall</strong></p>
+  </section>
+
+  <section class="policy-section" id="ios">
+    <h2>3. Delete Data on iOS</h2>
+
+    <h3>Option A: Offload the app (frees storage, deletes data)</h3>
+    <ol>
+      <li>Open <strong>Settings → General → iPhone Storage</strong></li>
+      <li>Find and tap <strong>Marea</strong></li>
+      <li>Tap <strong>Offload App</strong></li>
+      <li>All app data is deleted immediately</li>
+    </ol>
+
+    <h3>Option B: Delete the app</h3>
+    <ol>
+      <li>Long-press the <strong>Marea</strong> app icon on your home screen</li>
+      <li>Tap <strong>Remove App</strong></li>
+      <li>Tap <strong>Delete App</strong></li>
+      <li>Confirm. The app and all your data are permanently and irreversibly deleted.</li>
+    </ol>
+    <p>Alternatively: <strong>Settings → General → iPhone Storage → Marea → Delete App</strong></p>
+  </section>
+
+  <section class="policy-section" id="what-gets-deleted">
+    <h2>4. What Gets Deleted</h2>
+    <p>Deleting the App or clearing its storage removes all data stored by Marea, including:</p>
+    <ul>
+      <li>All cycle dates, period logs, and predictions</li>
+      <li>All daily log entries (symptoms, mood, flow, notes)</li>
+      <li>Habit logs and streak data</li>
+      <li>Onboarding settings (cycle length, period duration)</li>
+      <li>Notification preferences and reminder times</li>
+      <li>App lock settings</li>
+    </ul>
+    <p>Deletion is <strong>immediate and irreversible</strong>. There is no recovery option because we hold no copy of your data.</p>
+  </section>
+
+  <section class="policy-section" id="no-server-data">
+    <h2>5. No Server-Side Data to Delete</h2>
+    <p>Because Marea has no user accounts and no servers, there is no data held by us on your behalf. You do not need to submit a deletion request to us — all deletion is performed by you, on your device, instantly.</p>
+    <p>If you have any questions or concerns, you can still reach us at the address below.</p>
+  </section>
+
+  <section class="policy-section" id="contact">
+    <h2>6. Contact Us</h2>
+    <p><strong>Grievance Officer, Marea</strong><br>
+    Email: <a href="mailto:hello@trackwithmarea.com">hello@trackwithmarea.com</a><br>
+    Acknowledgment: within 48 hours</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Marea</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="data-deletion.html">Data Deletion</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Marea. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
