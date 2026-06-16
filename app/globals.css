@@ -704,7 +704,10 @@ nav.solid {
   flex-shrink: 0;
 }
 .ac-banner-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 .ac-banner-orb {
   position: absolute; border-radius: 50%;
@@ -871,7 +874,7 @@ nav.solid {
   .sidebar-cards { grid-template-columns: 1fr; }
 }
 
-/* ── IMPROVED ARTICLE READING PAGE ── */
+/* ── ARTICLE READING PAGE ── */
 .article-page {
   max-width: 680px; margin: 0 auto;
   padding: 7rem 6vw 6rem;
@@ -903,7 +906,8 @@ nav.solid {
 .article-read-time {
   font-size: .75rem; color: var(--text-muted); font-weight: 400;
 }
-.article-page h1 {
+.article-content h1,
+.article-detail-wrap h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.9rem,3.5vw,2.6rem);
   font-weight: 700; line-height: 1.18;
@@ -916,16 +920,28 @@ nav.solid {
   border-bottom: 1px solid rgba(167,98,98,.1);
   font-style: italic;
 }
-.article-page h3 {
+.article-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--text); margin: 2.5rem 0 .75rem;
+}
+.article-content h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.18rem; font-weight: 700;
   color: var(--text); margin: 2.2rem 0 .7rem;
 }
-.article-page p {
+.article-content p {
   font-size: 1rem; color: var(--text-sub);
   line-height: 1.9; font-weight: 300; margin-bottom: 1.1rem;
 }
-.article-page strong { font-weight: 600; color: var(--text); }
+.article-content strong { font-weight: 600; color: var(--text); }
+.article-content ul, .article-content ol {
+  padding-left: 1.5rem; margin-bottom: 1.1rem;
+}
+.article-content li {
+  font-size: 1rem; color: var(--text-sub);
+  line-height: 1.9; font-weight: 300; margin-bottom: .4rem;
+}
 .science-box {
   background: rgba(167,98,98,.06);
   border: 1px solid rgba(167,98,98,.16);
@@ -948,9 +964,14 @@ nav.solid {
   letter-spacing: .12em; font-weight: 700;
   color: var(--rose-dark); margin-bottom: .55rem; display: block;
 }
-.article-hero-img {
-  width: 100%; height: 260px; object-fit: cover;
-  border-radius: 16px; margin-bottom: 1.75rem; display: block;
+.article-hero-wrap {
+  position: relative;
+  width: 100%; height: 300px;
+  border-radius: 16px; overflow: hidden;
+  margin-bottom: 1.75rem;
+}
+.article-hero-wrap img {
+  object-fit: cover;
 }
 
 /* ============================================================
@@ -1405,7 +1426,6 @@ footer {
 .article-tag { font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--rose-dark); background: var(--rose-pale); padding: .22rem .65rem; border-radius: 100px; }
 .article-back { display: inline-flex; align-items: center; gap: .4rem; color: var(--rose-dark); text-decoration: none; font-size: .875rem; font-weight: 600; margin-bottom: 2rem; }
 .article-back:hover { color: var(--rose); }
-.article-hero-img { width: 100%; height: 320px; object-fit: cover; border-radius: 20px; margin-bottom: 2rem; }
 .science-box { background: rgba(167,98,98,.08); border: 1px solid rgba(167,98,98,.18); border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1.5rem 0; }
 .science-box .label { font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--rose); margin-bottom: .5rem; }
 .takeaway-box { background: var(--rose-pale); border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1.5rem 0; }

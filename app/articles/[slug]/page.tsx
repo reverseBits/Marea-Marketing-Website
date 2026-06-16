@@ -76,15 +76,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <div className="article-detail-layout">
           <main className="article-content">
             {article.image ? (
-              <Image
-                src={`/images/${article.image}`}
-                alt={article.title}
-                width={720}
-                height={320}
-                className="article-hero-img"
-                unoptimized
-                priority
-              />
+              <div className="article-hero-wrap">
+                <Image
+                  src={`/images/${article.image}`}
+                  alt={article.title}
+                  fill
+                  unoptimized
+                  priority
+                />
+              </div>
             ) : (
               <div className={`ac ${catClass}`} style={{ borderRadius: 16, marginBottom: '1.75rem', height: 200, cursor: 'default' }}>
                 <div className="ac-banner" style={{ height: '100%' }}>

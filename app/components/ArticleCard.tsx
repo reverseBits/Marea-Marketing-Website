@@ -32,6 +32,7 @@ export default function ArticleCard({ slug, title, hook, category, readTime, ima
             alt={title}
             fill
             className="ac-banner-img"
+            style={{ objectFit: 'cover' }}
             unoptimized
           />
         ) : (
