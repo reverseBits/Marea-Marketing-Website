@@ -18,16 +18,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${article.title} — Marea`,
     description: article.hook,
+    keywords: article.tags,
+    alternates: {
+      canonical: `/articles/${slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.hook,
       type: 'article',
-      images: article.image ? [{ url: `/images/${article.image}` }] : [],
+      url: `/articles/${slug}`,
+      images: article.image ? [{ url: `/images/${article.image}`, alt: article.title }] : [],
+      authors: ['Marea'],
+      section: article.category,
     },
     twitter: {
       card: 'summary_large_image',
       title: article.title,
       description: article.hook,
+      images: article.image ? [`/images/${article.image}`] : [],
     },
   }
 }
@@ -57,8 +65,26 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   const catClass = CAT_CLASS[article.category] ?? 'cat-cycle'
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    description: article.hook,
+    author: { '@type': 'Organization', name: 'Marea', url: 'https://marea.app' },
+    publisher: { '@type': 'Organization', name: 'Marea', url: 'https://marea.app' },
+    url: `https://marea.app/articles/${slug}`,
+    ...(article.image && { image: `https://marea.app/images/${article.image}` }),
+    keywords: article.tags.join(', '),
+    articleSection: article.category,
+    timeRequired: `PT${article.readTime.replace(' min', 'M')}`,
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <nav className="article-page-nav">
         <Link href="/" className="nav-logo">
           <svg height="22" viewBox="175 428 705 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 'auto', display: 'block' }}>

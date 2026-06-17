@@ -669,6 +669,26 @@ nav.solid {
   margin-top: .5rem;
 }
 
+/* View More Articles button */
+.view-more-articles-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .75rem 2rem;
+  border-radius: 100px;
+  border: 2px solid var(--rose);
+  color: var(--rose-dark);
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s, color .2s, transform .22s cubic-bezier(.16,1,.3,1);
+}
+.view-more-articles-btn:hover {
+  background: var(--rose-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 /* Category colour tokens */
 .cat-cycle    { --cat-bg: linear-gradient(135deg,#F5E8E8 0%,#E8CECE 100%); --cat-accent:#A76262; --cat-pill-bg:rgba(167,98,98,.14); --cat-pill-text:#7A4545; }
 .cat-movement { --cat-bg: linear-gradient(135deg,#E4EDE4 0%,#C8D8C8 100%); --cat-accent:#4A7A4A; --cat-pill-bg:rgba(74,122,74,.14); --cat-pill-text:#2E5A2E; }

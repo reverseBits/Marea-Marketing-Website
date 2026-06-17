@@ -4,9 +4,18 @@ import ClientScripts from './components/ClientScripts'
 import ArticleCard from './components/ArticleCard'
 import { getAllArticles } from '@/lib/articles'
 
+const FEATURED_SLUGS = [
+  'four-cycle-phases',
+  'period-pain-science',
+  'pms-vs-pmdd',
+  'luteal-phase-crash',
+]
+
 export default async function Home() {
   const articles = await getAllArticles()
-  const featured = articles.slice(0, 3)
+  const featured = FEATURED_SLUGS
+    .map(slug => articles.find(a => a.slug === slug))
+    .filter(Boolean) as typeof articles
   return (
     <>
       <ClientScripts />
@@ -273,10 +282,10 @@ export default async function Home() {
               image={a.image}
             />
           ))}
-          <Link href="/articles" className="ac-show-all">
-            <span className="ac-show-all-count">{articles.length}</span>
-            <span className="ac-show-all-label">articles</span>
-            <span className="ac-show-all-action">Browse all →</span>
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+          <Link href="/articles" className="view-more-articles-btn">
+            View More Articles →
           </Link>
         </div>
       </section>
