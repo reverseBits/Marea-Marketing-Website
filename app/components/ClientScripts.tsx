@@ -78,9 +78,26 @@ export default function ClientScripts() {
     document.getElementById('feedback-modal-close')?.addEventListener('click', closeFeedback)
     document.getElementById('feedback-trigger')?.addEventListener('click', openFeedback)
 
+    /* ── Interest / waitlist modal ── */
+    const openInterest = () => {
+      document.getElementById('interest-modal')?.classList.add('open')
+      document.getElementById('interest-modal-backdrop')?.classList.add('open')
+      document.body.style.overflow = 'hidden'
+    }
+    const closeInterest = () => {
+      document.getElementById('interest-modal')?.classList.remove('open')
+      document.getElementById('interest-modal-backdrop')?.classList.remove('open')
+      document.body.style.overflow = ''
+    }
+
+    document.getElementById('interest-modal-backdrop')?.addEventListener('click', closeInterest)
+    document.getElementById('interest-modal-close')?.addEventListener('click', closeInterest)
+    document.getElementById('interest-trigger-play')?.addEventListener('click', openInterest)
+    document.getElementById('interest-trigger-apple')?.addEventListener('click', openInterest)
+
     /* ── Keyboard escape ── */
     const onKeydown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeFeedback()
+      if (e.key === 'Escape') { closeFeedback(); closeInterest() }
     }
     document.addEventListener('keydown', onKeydown)
 

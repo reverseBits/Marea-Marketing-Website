@@ -336,7 +336,7 @@ export default async function Home() {
             </p>
 
             <div className="dl-btns r d3" style={{ justifyContent: 'center', marginBottom: 0 }}>
-              <a href="#" className="dl-btn dl-btn-google" target="_blank" rel="noopener noreferrer">
+              <button className="dl-btn dl-btn-google" id="interest-trigger-play">
                 <svg width="22" height="24" viewBox="13 9 31 35" xmlns="http://www.w3.org/2000/svg">
                   <path d="m13.426 12.37c-0.08533 0.31466-0.13018 0.64425-0.13018 0.98651v26.623c0 0.34162 0.04432 0.67233 0.13072 0.98587l14.684-14.681-14.684-13.914" fill="#4285F4" />
                   <path d="m27.727 26.668 7.3473-7.3451-15.96-9.2534c-0.58012-0.34746-1.2572-0.54799-1.9817-0.54799-1.7734 0-3.2697 1.2068-3.7051 2.8447-0.00053 0.0016-0.00053 0.0027-0.00053 0.0041l14.3 14.298" fill="#34A853" />
@@ -347,8 +347,8 @@ export default async function Home() {
                   <span className="dl-btn-sub">Get it on</span>
                   <span className="dl-btn-name">Google Play</span>
                 </div>
-              </a>
-              <a href="#" className="dl-btn dl-btn-apple" target="_blank" rel="noopener noreferrer">
+              </button>
+              <button className="dl-btn dl-btn-apple" id="interest-trigger-apple">
                 <svg width="20" height="24" viewBox="10 8 19 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M24.76888,20.30068a4.94881,4.94881,0,0,1,2.35656-4.15206,5.06566,5.06566,0,0,0-3.99116-2.15768c-1.67924-.17626-3.30719,1.00483-4.1629,1.00483-.87227,0-2.18977-.98733-3.6085-.95814a5.31529,5.31529,0,0,0-4.47292,2.72787c-1.934,3.34842-.49141,8.26947,1.3612,10.97608.9269,1.32535,2.01018,2.8058,3.42763,2.7533,1.38706-.05753,1.9051-.88448,3.5794-.88448,1.65876,0,2.14479.88448,3.591.8511,1.48838-.02416,2.42613-1.33124,3.32051-2.66914a10.962,10.962,0,0,0,1.51842-3.09251A4.78205,4.78205,0,0,1,24.76888,20.30068Z" />
                   <path d="M22.03725,12.21089a4.87248,4.87248,0,0,0,1.11452-3.49062,4.95746,4.95746,0,0,0-3.20758,1.65961,4.63634,4.63634,0,0,0-1.14371,3.36139A4.09905,4.09905,0,0,0,22.03725,12.21089Z" />
@@ -357,7 +357,7 @@ export default async function Home() {
                   <span className="dl-btn-sub">Download on the</span>
                   <span className="dl-btn-name">App Store</span>
                 </div>
-              </a>
+              </button>
             </div>
 
             <p className="cta-note r d4">Free · No account · No ads · Data stays on your device</p>
@@ -371,8 +371,8 @@ export default async function Home() {
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
             </div>
-            <p className="ccc-title">Share your feedback</p>
-            <p className="ccc-sub">Found a bug? Love a feature? Have a wish? We read every single message.</p>
+            <span className="ccc-title">Share your feedback</span>
+            <span className="ccc-sub">Found a bug? Love a feature? Have a wish? We read every single message.</span>
             <span className="ccc-action">Write to us →</span>
           </a>
           <a href="https://instagram.com/trackwithmarea" target="_blank" rel="noopener noreferrer" className="cta-connect-card">
@@ -383,8 +383,8 @@ export default async function Home() {
                 <circle cx="17.5" cy="6.5" r="1" fill="rgba(255,255,255,.75)" stroke="none" />
               </svg>
             </div>
-            <p className="ccc-title">Follow along</p>
-            <p className="ccc-sub">Cycle wellness tips, app updates, and a community that gets it.</p>
+            <span className="ccc-title">Follow along</span>
+            <span className="ccc-sub">Cycle wellness tips, app updates, and a community that gets it.</span>
             <span className="ccc-action">@trackwithmarea →</span>
           </a>
         </div>
@@ -422,6 +422,24 @@ export default async function Home() {
           className="fm-iframe"
           src="https://docs.google.com/forms/d/e/1FAIpQLSd5Vn8CaGX0cF1u0lq8LewZiqS0m3J6B4HzH7bEFFHkTXyVFQ/viewform?embedded=true"
           title="Feedback form"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      {/* ── Interest / waitlist modal ── */}
+      <div id="interest-modal-backdrop"></div>
+      <div id="interest-modal" role="dialog" aria-modal={true} aria-label="Show your interest">
+        <div className="fm-header">
+          <div>
+            <div className="fm-title">Show your interest</div>
+            <div className="fm-sub">Leave your email - we&apos;ll notify you the moment Marea launches.</div>
+          </div>
+          <button className="fm-close" id="interest-modal-close" aria-label="Close">✕</button>
+        </div>
+        <iframe
+          className="fm-iframe"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdmFtDfRC6BxVz9rwajd55GNTXlE10XRk7k4ZNMu6dmkxWtsg/viewform?embedded=true"
+          title="Interest form"
           loading="lazy"
         ></iframe>
       </div>

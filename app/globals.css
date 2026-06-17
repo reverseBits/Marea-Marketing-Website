@@ -1261,6 +1261,10 @@ footer {
   text-decoration: none;
   min-width: 185px;
   transition: transform .22s, box-shadow .22s;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 .dl-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,.35); }
 .dl-btn-apple  { background: white; color: var(--rose-dark); }
@@ -1377,6 +1381,27 @@ footer {
 }
 .fm-close:hover { background: #e8c8c8; }
 .fm-iframe { flex: 1; border: none; width: 100%; }
+
+#interest-modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(44,26,26,.55);
+  backdrop-filter: blur(4px);
+  z-index: 1999;
+}
+#interest-modal-backdrop.open { display: block; }
+#interest-modal {
+  position: fixed; top: 50%; left: 50%;
+  transform: translate(-50%, -48%) scale(.96);
+  width: min(600px, 94vw); height: min(680px, 88vh);
+  background: var(--off-white); border: 1px solid rgba(167,98,98,.15);
+  border-radius: 20px; z-index: 2000;
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+  display: flex; flex-direction: column; overflow: hidden;
+}
+#interest-modal.open { opacity: 1; pointer-events: auto; transform: translate(-50%, -50%) scale(1); }
 
 /* ============================================================
    MOBILE FIXES
