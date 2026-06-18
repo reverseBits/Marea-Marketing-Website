@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Data Deletion — Marea',
+  title: 'Data Deletion | Marea',
   description: 'How to delete your Marea data. All data is stored locally on your device, no accounts, no servers.',
 }
 
@@ -94,7 +94,7 @@ export default function DataDeletionPage() {
 
         <section className="policy-section" id="no-server-data">
           <h2>5. No Server-Side Data to Delete</h2>
-          <p>Because Marea has no user accounts and no servers, there is no data held by us on your behalf. You do not need to submit a deletion request to us — all deletion is performed by you, on your device, instantly.</p>
+          <p>Because Marea has no user accounts and no servers, there is no data held by us on your behalf. You do not need to submit a deletion request to us. All deletion is performed by you, on your device, instantly.</p>
           <p>If you have any questions or concerns, you can still reach us at the address below.</p>
         </section>
 

@@ -36,7 +36,7 @@ export default async function Home() {
           <li><a href="#ch-privacy">Privacy</a></li>
           <li><a href="#ch-learn">Learn</a></li>
           <li><a href="#ch-faq">FAQ</a></li>
-          <li><a href="#ch-download" className="nav-cta">Get App</a></li>
+          <li><button className="nav-cta" id="interest-trigger-nav">Show Interest</button></li>
         </ul>
         <button className="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -55,7 +55,7 @@ export default async function Home() {
           </p>
           <div className="hero-cta-group r d3">
             <div className="hero-actions">
-              <a href="#ch-download" className="btn-dark">Download Marea</a>
+              <button className="btn-dark" id="interest-trigger-hero">Show Your Interest</button>
               <a href="#ch-ritual" className="btn-outline">See how it works</a>
             </div>
             <p className="hero-note d4">Science-backed · Privacy-first · Built for India</p>
@@ -134,7 +134,7 @@ export default async function Home() {
             <span className="screen-caption">Habit patterns</span>
           </div>
           <div className="screen-item r d4">
-            <Image src="/images/insights.png" alt="Insights — cycle patterns and habit correlations" loading="lazy" width={200} height={400} unoptimized />
+            <Image src="/images/insights.png" alt="Insights: cycle patterns and habit correlations" loading="lazy" width={200} height={400} unoptimized />
             <span className="screen-caption">Insights</span>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default async function Home() {
           <Image
             src="/images/dailylog.png"
             className="ritual-phone-img"
-            alt="Daily log — Sleep, Mood, Energy, Stress check-in"
+            alt="Daily log: Sleep, Mood, Energy, Stress check-in"
             loading="lazy"
             width={300}
             height={600}
@@ -310,7 +310,7 @@ export default async function Home() {
 
             <div className="faq-item">
               <div className="faq-q">Is Marea available on iPhone?</div>
-              <div className="faq-a">Yes, Marea is available on both Android and iOS.</div>
+              <div className="faq-a">Marea is launching on both Android and iOS. Show your interest to be notified the moment it goes live.</div>
             </div>
 
             <div className="faq-item">
@@ -337,40 +337,21 @@ export default async function Home() {
 
         <div className="cta-inner">
           <div className="cta-copy">
-            <p className="ch-kicker ck-dark r">Get the app</p>
+            <p className="ch-kicker ck-dark r">Coming soon</p>
             <h2 className="cta-hl r d1">
               Your body is already<br />telling you. <em>Start listening.</em>
             </h2>
             <p className="cta-p r d2">
-              Free forever. 60 seconds a day. Everything stays on your phone - no account, no cloud, no compromise.
+              Marea is launching soon. Leave your email and we&apos;ll reach out the moment it&apos;s live.
             </p>
 
             <div className="dl-btns r d3" style={{ justifyContent: 'center', marginBottom: 0 }}>
-              <button className="dl-btn dl-btn-google" id="interest-trigger-play">
-                <svg width="22" height="24" viewBox="13 9 31 35" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m13.426 12.37c-0.08533 0.31466-0.13018 0.64425-0.13018 0.98651v26.623c0 0.34162 0.04432 0.67233 0.13072 0.98587l14.684-14.681-14.684-13.914" fill="#4285F4" />
-                  <path d="m27.727 26.668 7.3473-7.3451-15.96-9.2534c-0.58012-0.34746-1.2572-0.54799-1.9817-0.54799-1.7734 0-3.2697 1.2068-3.7051 2.8447-0.00053 0.0016-0.00053 0.0027-0.00053 0.0041l14.3 14.298" fill="#34A853" />
-                  <path d="m27.622 25.899-14.194 15.066c0.00053 0.0031 0.0016 0.0057 0.0021 0.0089 0.43532 1.636 1.9296 2.8406 3.703 2.8406 0.70892 0 1.3745-0.19166 1.9453-0.52812l0.04533-0.02656 15.978-9.22-7.479-8.141" fill="#EA4335" />
-                  <path d="m41.983 23.334-0.0136-0.0093-6.8982-3.999-7.7717 6.9156 7.7987 7.7977 6.8618-3.9592c1.203-0.64945 2.0197-1.9177 2.0197-3.3802 0-1.452-0.80571-2.7139-1.9968-3.3655" fill="#FBBC04" />
-                </svg>
-                <div className="dl-btn-text">
-                  <span className="dl-btn-sub">Get it on</span>
-                  <span className="dl-btn-name">Google Play</span>
-                </div>
-              </button>
-              <button className="dl-btn dl-btn-apple" id="interest-trigger-apple">
-                <svg width="20" height="24" viewBox="10 8 19 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24.76888,20.30068a4.94881,4.94881,0,0,1,2.35656-4.15206,5.06566,5.06566,0,0,0-3.99116-2.15768c-1.67924-.17626-3.30719,1.00483-4.1629,1.00483-.87227,0-2.18977-.98733-3.6085-.95814a5.31529,5.31529,0,0,0-4.47292,2.72787c-1.934,3.34842-.49141,8.26947,1.3612,10.97608.9269,1.32535,2.01018,2.8058,3.42763,2.7533,1.38706-.05753,1.9051-.88448,3.5794-.88448,1.65876,0,2.14479.88448,3.591.8511,1.48838-.02416,2.42613-1.33124,3.32051-2.66914a10.962,10.962,0,0,0,1.51842-3.09251A4.78205,4.78205,0,0,1,24.76888,20.30068Z" />
-                  <path d="M22.03725,12.21089a4.87248,4.87248,0,0,0,1.11452-3.49062,4.95746,4.95746,0,0,0-3.20758,1.65961,4.63634,4.63634,0,0,0-1.14371,3.36139A4.09905,4.09905,0,0,0,22.03725,12.21089Z" />
-                </svg>
-                <div className="dl-btn-text">
-                  <span className="dl-btn-sub">Download on the</span>
-                  <span className="dl-btn-name">App Store</span>
-                </div>
+              <button className="btn-interest-main" id="interest-trigger-main">
+                Show Your Interest
               </button>
             </div>
 
-            <p className="cta-note r d4">Free · No account · No ads · Data stays on your device</p>
+            <p className="cta-note r d4">Free · Privacy-first · Built for India</p>
           </div>
         </div>
 
@@ -424,7 +405,7 @@ export default async function Home() {
         <div className="fm-header">
           <div>
             <div className="fm-title">Write to us</div>
-            <div className="fm-sub">Bugs, love, wishes — we read every message.</div>
+            <div className="fm-sub">Bugs, love, wishes. We read every message.</div>
           </div>
           <button className="fm-close" id="feedback-modal-close" aria-label="Close">✕</button>
         </div>

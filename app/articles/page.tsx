@@ -3,18 +3,18 @@ import Link from 'next/link'
 import ArticlesFilter from '@/app/components/ArticlesFilter'
 
 export const metadata: Metadata = {
-  title: 'Articles — Marea',
+  title: 'Articles | Marea',
   description: 'Science-backed reads on menstrual health, hormones, cycle phases, nutrition, sleep, and more. Written clearly, grounded in research.',
   keywords: ['menstrual cycle', 'period health', 'hormones', 'cycle phases', 'period pain', 'PMS', 'PMDD', 'cycle tracking', 'women\'s health'],
   openGraph: {
-    title: 'Articles — Marea',
+    title: 'Articles | Marea',
     description: 'Science-backed reads on menstrual health, hormones, cycle phases, nutrition, sleep, and more.',
     type: 'website',
     url: '/articles',
   },
   twitter: {
     card: 'summary',
-    title: 'Articles — Marea',
+    title: 'Articles | Marea',
     description: 'Science-backed reads on menstrual health, hormones, cycle phases, nutrition, sleep, and more.',
   },
   alternates: {
@@ -42,7 +42,7 @@ export default function ArticlesPage() {
         <div className="articles-page-inner">
           <header className="articles-page-hdr">
             <h1>Science-backed reads.<br /><em>Judgment free.</em></h1>
-            <p>Everything you weren't taught about your cycle — written clearly, grounded in research.</p>
+            <p>Everything you weren't taught about your cycle, written clearly, grounded in research.</p>
           </header>
 
           <ArticlesFilter />

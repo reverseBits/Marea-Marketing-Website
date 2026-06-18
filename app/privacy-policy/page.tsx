@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Marea',
+  title: 'Privacy Policy | Marea',
   description: "Marea's Privacy Policy. Marea is a fully offline period tracking app that stores all data locally on your device.",
 }
 

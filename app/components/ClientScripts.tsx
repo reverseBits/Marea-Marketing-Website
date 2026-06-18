@@ -81,12 +81,12 @@ export default function ClientScripts() {
     document.getElementById('feedback-trigger')?.addEventListener('click', openFeedback)
 
     /* ── Interest / waitlist modal ── */
-    const openInterest = (platform: 'android' | 'ios') => {
+    const openInterest = (source: string) => {
       document.getElementById('interest-modal')?.classList.add('open')
       document.getElementById('interest-modal-backdrop')?.classList.add('open')
       document.body.style.overflow = 'hidden'
-      track('cta_clicked', { platform })
-      track('interest_modal_opened', { platform })
+      track('cta_clicked', { source })
+      track('interest_modal_opened', { source })
     }
     const closeInterest = () => {
       document.getElementById('interest-modal')?.classList.remove('open')
@@ -96,8 +96,9 @@ export default function ClientScripts() {
 
     document.getElementById('interest-modal-backdrop')?.addEventListener('click', closeInterest)
     document.getElementById('interest-modal-close')?.addEventListener('click', closeInterest)
-    document.getElementById('interest-trigger-play')?.addEventListener('click', () => openInterest('android'))
-    document.getElementById('interest-trigger-apple')?.addEventListener('click', () => openInterest('ios'))
+    document.getElementById('interest-trigger-main')?.addEventListener('click', () => openInterest('cta'))
+    document.getElementById('interest-trigger-hero')?.addEventListener('click', () => openInterest('hero'))
+    document.getElementById('interest-trigger-nav')?.addEventListener('click', () => openInterest('nav'))
 
     /* ── Keyboard escape ── */
     const onKeydown = (e: KeyboardEvent) => {

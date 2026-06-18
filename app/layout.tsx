@@ -4,8 +4,22 @@ import MixpanelProvider from './components/MixpanelProvider'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://marea.app'),
-  title: 'Marea — Know your cycle. Know yourself.',
-  description: 'Marea — Track your menstrual cycle and connect it to your daily habits. Science-backed insights, 60-second evening check-ins, complete privacy. Free forever. Built for India.',
+  title: 'Marea: Know your cycle. Know yourself.',
+  description: 'Track your cycle with Marea. Science-backed insights, 60-second evening check-ins, complete privacy. Free forever. Built for India.',
+  openGraph: {
+    title: 'Marea: Know your cycle. Know yourself.',
+    description: 'Track your cycle with Marea. Science-backed insights, 60-second evening check-ins, complete privacy. Free forever. Built for India.',
+    url: 'https://marea.app',
+    siteName: 'Marea',
+    images: [{ url: '/images/home.png', width: 1200, height: 630, alt: 'Marea app' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Marea: Know your cycle. Know yourself.',
+    description: 'Track your cycle with Marea. Science-backed insights, 60-second evening check-ins, complete privacy. Free forever. Built for India.',
+    images: ['/images/home.png'],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

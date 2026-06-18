@@ -8,6 +8,7 @@ export interface ArticleMeta {
   slug: string
   title: string
   hook: string
+  tldr?: string
   tags: string[]
   category: string
   readTime: string
@@ -29,6 +30,7 @@ export async function getArticleBySlug(slug: string): Promise<ArticleMeta | null
     slug,
     title: data.title as string,
     hook: data.hook as string,
+    tldr: data.tldr as string | undefined,
     tags: (data.tags as string[]) ?? [],
     category: (data.category as string) ?? '',
     readTime: (data.readTime as string) ?? '8 min',

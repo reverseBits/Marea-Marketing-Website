@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = await getArticleBySlug(slug)
   if (!article) return {}
   return {
-    title: `${article.title} — Marea`,
+    title: `${article.title} | Marea`,
     description: article.hook,
     keywords: article.tags,
     alternates: {
@@ -134,6 +134,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
             <h1>{article.title}</h1>
             <p className="article-hook-lede">{article.hook}</p>
+
+            {article.tldr && (
+              <div className="tldr-box">
+                <span className="label">TL;DR</span>
+                <p>{article.tldr}</p>
+              </div>
+            )}
 
             <MDXRemote source={article.content} />
             <div id="article-end-sentinel" />
