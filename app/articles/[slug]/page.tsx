@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ArticleCard from '@/app/components/ArticleCard'
 import ArticleTracker from '@/app/components/ArticleTracker'
+import TableOfContents from '@/app/components/TableOfContents'
 
 export async function generateStaticParams() {
   const slugs = await getAllArticleSlugs()
@@ -146,25 +147,28 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <div id="article-end-sentinel" />
           </main>
 
-          {related.length > 0 && (
-            <aside className="article-sidebar">
-              <p className="sidebar-heading">Suggested reads</p>
-              <div className="sidebar-cards">
-                {related.map(a => (
-                  <ArticleCard
-                    key={a.slug}
-                    slug={a.slug}
-                    title={a.title}
-                    hook={a.hook}
-                    category={a.category}
-                    readTime={a.readTime}
-                    image={a.image}
-                    source="article_sidebar"
-                  />
-                ))}
-              </div>
-            </aside>
-          )}
+          <aside className="article-sidebar">
+            <TableOfContents />
+            {related.length > 0 && (
+              <>
+                <p className="sidebar-heading">Suggested reads</p>
+                <div className="sidebar-cards">
+                  {related.map(a => (
+                    <ArticleCard
+                      key={a.slug}
+                      slug={a.slug}
+                      title={a.title}
+                      hook={a.hook}
+                      category={a.category}
+                      readTime={a.readTime}
+                      image={a.image}
+                      source="article_sidebar"
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </aside>
         </div>
       </div>
     </>
