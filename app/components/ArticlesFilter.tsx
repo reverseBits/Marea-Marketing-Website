@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { track } from '@/lib/mixpanel'
 
 interface Article {
   slug: string
@@ -59,7 +60,7 @@ export default function ArticlesFilter() {
           <button
             key={cat}
             className={`cat-filter-btn${active === cat ? ' active' : ''}`}
-            onClick={() => setActive(cat)}
+            onClick={() => { setActive(cat); track('article_category_filtered', { category: cat }) }}
           >
             {cat}
           </button>
@@ -72,6 +73,7 @@ export default function ArticlesFilter() {
             key={a.slug}
             href={`/articles/${a.slug}`}
             className={`ac ${CAT_CLASS[a.category] ?? 'cat-cycle'}`}
+            onClick={() => track('article_card_clicked', { slug: a.slug, title: a.title, category: a.category, source: 'articles_list' })}
           >
             <div className="ac-banner">
               <img

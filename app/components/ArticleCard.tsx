@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { track } from '@/lib/mixpanel'
 
 interface Props {
   slug: string
@@ -8,6 +11,7 @@ interface Props {
   category: string
   readTime: string
   image?: string
+  source?: 'home' | 'articles_list' | 'article_sidebar'
 }
 
 const CAT_CLASS: Record<string, string> = {
@@ -21,10 +25,14 @@ const CAT_CLASS: Record<string, string> = {
   'Skin':      'cat-skin',
 }
 
-export default function ArticleCard({ slug, title, hook, category, readTime, image }: Props) {
+export default function ArticleCard({ slug, title, hook, category, readTime, image, source }: Props) {
   const catClass = CAT_CLASS[category] ?? 'cat-cycle'
   return (
-    <Link href={`/articles/${slug}`} className={`ac ${catClass}`}>
+    <Link
+      href={`/articles/${slug}`}
+      className={`ac ${catClass}`}
+      onClick={() => track('article_card_clicked', { slug, title, category, source: source ?? 'unknown' })}
+    >
       <div className="ac-banner">
         {image ? (
           <Image

@@ -280,6 +280,7 @@ export default async function Home() {
               category={a.category}
               readTime={a.readTime}
               image={a.image}
+              source="home"
             />
           ))}
         </div>

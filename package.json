@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/mixpanel-browser": "^2.60.0",
+    "gray-matter": "^4.0.3",
+    "mixpanel-browser": "^2.80.0",
     "next": "15.3.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "next-mdx-remote": "^5.0.0",
-    "gray-matter": "^4.0.3"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

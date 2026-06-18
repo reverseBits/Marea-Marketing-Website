@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import MixpanelProvider from './components/MixpanelProvider'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://marea.app'),
@@ -18,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <MixpanelProvider>{children}</MixpanelProvider>
+      </body>
     </html>
   )
 }

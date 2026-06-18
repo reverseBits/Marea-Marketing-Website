@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import ArticleCard from '@/app/components/ArticleCard'
+import ArticleTracker from '@/app/components/ArticleTracker'
 
 export async function generateStaticParams() {
   const slugs = await getAllArticleSlugs()
@@ -85,6 +86,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <ArticleTracker slug={slug} title={article.title} category={article.category} readTime={article.readTime} />
       <nav className="article-page-nav">
         <Link href="/" className="nav-logo">
           <svg height="22" viewBox="175 428 705 157" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 'auto', display: 'block' }}>
@@ -134,6 +136,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <p className="article-hook-lede">{article.hook}</p>
 
             <MDXRemote source={article.content} />
+            <div id="article-end-sentinel" />
           </main>
 
           {related.length > 0 && (
@@ -149,6 +152,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     category={a.category}
                     readTime={a.readTime}
                     image={a.image}
+                    source="article_sidebar"
                   />
                 ))}
               </div>

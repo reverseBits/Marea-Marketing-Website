@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { track } from '@/lib/mixpanel'
 
 export default function ClientScripts() {
   useEffect(() => {
@@ -67,6 +68,7 @@ export default function ClientScripts() {
       document.getElementById('feedback-modal')?.classList.add('open')
       document.getElementById('feedback-modal-backdrop')?.classList.add('open')
       document.body.style.overflow = 'hidden'
+      track('feedback_modal_opened')
     }
     const closeFeedback = () => {
       document.getElementById('feedback-modal')?.classList.remove('open')
@@ -79,10 +81,12 @@ export default function ClientScripts() {
     document.getElementById('feedback-trigger')?.addEventListener('click', openFeedback)
 
     /* ── Interest / waitlist modal ── */
-    const openInterest = () => {
+    const openInterest = (platform: 'android' | 'ios') => {
       document.getElementById('interest-modal')?.classList.add('open')
       document.getElementById('interest-modal-backdrop')?.classList.add('open')
       document.body.style.overflow = 'hidden'
+      track('cta_clicked', { platform })
+      track('interest_modal_opened', { platform })
     }
     const closeInterest = () => {
       document.getElementById('interest-modal')?.classList.remove('open')
@@ -92,8 +96,8 @@ export default function ClientScripts() {
 
     document.getElementById('interest-modal-backdrop')?.addEventListener('click', closeInterest)
     document.getElementById('interest-modal-close')?.addEventListener('click', closeInterest)
-    document.getElementById('interest-trigger-play')?.addEventListener('click', openInterest)
-    document.getElementById('interest-trigger-apple')?.addEventListener('click', openInterest)
+    document.getElementById('interest-trigger-play')?.addEventListener('click', () => openInterest('android'))
+    document.getElementById('interest-trigger-apple')?.addEventListener('click', () => openInterest('ios'))
 
     /* ── Keyboard escape ── */
     const onKeydown = (e: KeyboardEvent) => {
