@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { getAllArticleSlugs } from '@/lib/articles'
 
+export const dynamic = 'force-static'
+
 const BASE = 'https://marea.app'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
