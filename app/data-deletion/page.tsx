@@ -28,7 +28,7 @@ export default function DataDeletionPage() {
 
       <div className="page-wrap">
         <h1 className="page-title">Data Deletion</h1>
-        <p className="page-meta">Last Updated: June 9, 2026</p>
+        <p className="page-meta">Last Updated: September 3, 2026</p>
 
         <section className="policy-section" id="overview">
           <h2>1. How Your Data Is Stored</h2>
@@ -100,7 +100,9 @@ export default function DataDeletionPage() {
 
         <section className="policy-section" id="contact">
           <h2>6. Contact Us</h2>
-          <p><strong>Grievance Officer, Marea</strong><br />
+          <p><strong>Grievance Officer:</strong> Mr. Tapan Parmar<br />
+            Address: 520, Fortune Business Hub, Nr. Satyamev Elysium, Shilaj Daskroi, Ahmedabad, Gujarat - 380059, India<br />
+            Contact: <a href="tel:+919898472198">+91 98984 72198</a><br />
             Email: <a href="mailto:hello@trackwithmarea.com">hello@trackwithmarea.com</a><br />
             Acknowledgment: within 48 hours</p>
         </section>

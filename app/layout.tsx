@@ -5,7 +5,7 @@ import MixpanelProvider from './components/MixpanelProvider'
 export const metadata: Metadata = {
   metadataBase: new URL('https://marea.app'),
   title: 'Marea: Know your cycle. Know yourself.',
-  description: 'Track your cycle with Marea. Science-backed insights, 60-second evening check-ins, complete privacy. Free forever. Built for India.',
+  description: 'Track your cycle with Marea. Science-backed insights, 60-second check-ins, complete privacy. Built for India.',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Marea: Know your cycle. Know yourself.',
-    description: 'Track your cycle with Marea. Science-backed insights, 60-second evening check-ins, complete privacy. Free forever. Built for India.',
+    description: 'Track your cycle with Marea. Science-backed insights, 60-second check-ins, complete privacy. Built for India.',
     url: 'https://marea.app',
     siteName: 'Marea',
     images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: 'Marea: Know your cycle. Know yourself.' }],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Marea: Know your cycle. Know yourself.',
-    description: 'Track your cycle with Marea. Science-backed insights, 60-second evening check-ins, complete privacy. Free forever. Built for India.',
+    description: 'Track your cycle with Marea. Science-backed insights, 60-second check-ins, complete privacy. Built for India.',
     images: ['/images/og-image.png'],
   },
 }
