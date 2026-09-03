@@ -53,8 +53,14 @@ export default function PrivacyPolicyPage() {
           <p>Menstrual and reproductive health data constitutes <strong>sensitive personal data</strong> under Indian law. Marea treats all data you enter with the highest level of protection.</p>
           <p><strong>This data never leaves your device.</strong> It is not uploaded to any server, not shared with any third party, and not accessible to us or anyone else.</p>
 
-          <h3>Notification permission</h3>
-          <p>Marea requests permission to send notifications solely to deliver cycle reminders and daily log reminders that you configure within the App. Notification scheduling is handled entirely on your device. No notification content or delivery data is transmitted off your device.</p>
+          <h3>App permissions</h3>
+          <p>Marea requests only the following, all for on-device functionality:</p>
+          <ul>
+            <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code> on Android) - to show the cycle and daily-log reminders you configure in the App.</li>
+            <li><strong>Run after restart</strong> (<code>RECEIVE_BOOT_COMPLETED</code> on Android) - to restore your scheduled reminders after the device reboots.</li>
+            <li><strong>Device biometric / screen lock</strong> - used only if you turn on App Lock, and only through the operating system&apos;s local authentication service. No biometric data is read or stored by the App.</li>
+          </ul>
+          <p>Marea does not request internet, network, exact-alarm, location, storage, contacts, or camera permissions. Reminder scheduling is handled entirely on your device, and no notification content or timing data leaves your device. Because the operating system may batch alarms to save battery, a reminder may arrive a few minutes after the exact time you set.</p>
 
           <h3>Data we do NOT collect</h3>
           <ul>
