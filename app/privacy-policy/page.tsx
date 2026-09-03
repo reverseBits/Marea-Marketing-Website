@@ -70,6 +70,7 @@ export default function PrivacyPolicyPage() {
             <li>Usage analytics or crash reports</li>
             <li>IP addresses or network data</li>
             <li>Payment or financial information</li>
+            <li>Data from Health Connect, Apple Health, or any other app</li>
           </ul>
 
           <h3>Automatic data collection</h3>
