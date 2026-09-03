@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
 
       <div className="page-wrap">
         <h1 className="page-title">Privacy Policy</h1>
-        <p className="page-meta">Effective Date: June 9, 2026 &nbsp;&nbsp;|&nbsp;&nbsp; Last Updated: June 9, 2026</p>
+        <p className="page-meta">Effective Date: September 3, 2026 &nbsp;&nbsp;|&nbsp;&nbsp; Last Updated: September 3, 2026</p>
 
         <section className="policy-section" id="overview">
           <h2>1. Overview</h2>

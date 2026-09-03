@@ -28,7 +28,7 @@ export default function DataDeletionPage() {
 
       <div className="page-wrap">
         <h1 className="page-title">Data Deletion</h1>
-        <p className="page-meta">Last Updated: June 9, 2026</p>
+        <p className="page-meta">Last Updated: September 3, 2026</p>
 
         <section className="policy-section" id="overview">
           <h2>1. How Your Data Is Stored</h2>
