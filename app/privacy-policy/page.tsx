@@ -86,13 +86,14 @@ export default function PrivacyPolicyPage() {
             <li>Reminders and notifications - triggered locally by your device</li>
           </ul>
           <p>We do <strong>not</strong> use your data for advertising, profiling, research, or any commercial purpose.</p>
+          <p>Marea records menstrual cycle and reproductive health information. This data is stored only on your device. We never sell it, never share it with third parties, and never use it for advertising or for any employment, insurance, credit, or eligibility decision.</p>
         </section>
 
         <section className="policy-section" id="data-storage">
           <h2>4. Data Storage &amp; Security</h2>
           <p>All data is stored in the App&apos;s private data directory on your device, accessible only to Marea via the operating system&apos;s app sandboxing. Your data is protected by:</p>
           <ul>
-            <li>Your device&apos;s screen lock and biometric authentication</li>
+            <li>Your device&apos;s screen lock and biometric authentication. If you enable App Lock in Marea, the App additionally requires your device biometric or passcode, checked by the operating system&apos;s local authentication service, each time you open it. This check happens entirely on-device.</li>
             <li>The operating system&apos;s app sandboxing (iOS and Android), which prevents other apps from accessing Marea&apos;s data</li>
             <li>No network transmission; data is never sent over the internet or any external connection</li>
           </ul>
@@ -112,7 +113,10 @@ export default function PrivacyPolicyPage() {
           <h3>Local notifications (flutter_local_notifications)</h3>
           <p>Marea uses the <code>flutter_local_notifications</code> library to schedule and deliver reminders on your device. This library operates entirely offline and makes no network requests. No notification content or timing data leaves your device.</p>
 
-          <p>The App does not contain links to external websites and does not make network requests.</p>
+          <p>The App holds no internet permission, contains no links to external websites, and makes no network requests of any kind.</p>
+
+          <h3>Google Play</h3>
+          <p>If you obtained Marea from Google Play, Google may independently collect aggregate crash, performance, and installation statistics under its own policies. This happens at the platform level, is outside our control, and is separate from the App, which itself transmits nothing.</p>
         </section>
 
         <section className="policy-section" id="children">
@@ -145,9 +149,14 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p>Since Marea processes all data locally and we hold none of your data on servers, most rights are exercised directly through the App.</p>
 
+          <h3>Users in the EEA, United Kingdom, and California</h3>
+          <p>Because Marea processes all data locally on your device, operates no servers, and transmits nothing, we do not collect, store, receive, or transfer personal data as defined by the EU GDPR, UK GDPR, or the California Consumer Privacy Act / CPRA, and we do not sell or &quot;share&quot; personal information. You exercise every right these laws provide by viewing, editing, or deleting entries in the App, or by uninstalling it. For questions, contact <a href="mailto:hello@trackwithmarea.com">hello@trackwithmarea.com</a>.</p>
+
           <h3>Grievance Officer</h3>
           <p>For any privacy grievances or data-related requests under the DPDP Act, contact our Grievance Officer:</p>
-          <p><strong>Grievance Officer, Marea</strong><br />
+          <p><strong>Grievance Officer:</strong> Mr. Tapan Parmar<br />
+            Address: 520, Fortune Business Hub, Nr. Satyamev Elysium, Shilaj Daskroi, Ahmedabad, Gujarat - 380059, India<br />
+            Contact: <a href="tel:+919898472198">+91 98984 72198</a><br />
             Email: <a href="mailto:hello@trackwithmarea.com">hello@trackwithmarea.com</a><br />
             Acknowledgment: within 48 hours. Resolution: within a reasonable time as per applicable law.</p>
         </section>
@@ -172,7 +181,9 @@ export default function PrivacyPolicyPage() {
         <section className="policy-section" id="contact">
           <h2>10. Contact Us</h2>
           <p>Questions, concerns, or requests regarding this Privacy Policy? Reach us at:</p>
-          <p><strong>Grievance Officer, Marea</strong><br />
+          <p><strong>Grievance Officer:</strong> Mr. Tapan Parmar<br />
+            Address: 520, Fortune Business Hub, Nr. Satyamev Elysium, Shilaj Daskroi, Ahmedabad, Gujarat - 380059, India<br />
+            Contact: <a href="tel:+919898472198">+91 98984 72198</a><br />
             Email: <a href="mailto:hello@trackwithmarea.com">hello@trackwithmarea.com</a><br />
             Acknowledgment: within 48 hours</p>
         </section>
