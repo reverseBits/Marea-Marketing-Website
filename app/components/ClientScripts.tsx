@@ -96,9 +96,15 @@ export default function ClientScripts() {
 
     document.getElementById('interest-modal-backdrop')?.addEventListener('click', closeInterest)
     document.getElementById('interest-modal-close')?.addEventListener('click', closeInterest)
-    document.getElementById('interest-trigger-main')?.addEventListener('click', () => openInterest('cta'))
-    document.getElementById('interest-trigger-hero')?.addEventListener('click', () => openInterest('hero'))
-    document.getElementById('interest-trigger-nav')?.addEventListener('click', () => openInterest('nav'))
+    document.getElementById('interest-trigger-apple')?.addEventListener('click', () => openInterest('cta_ios'))
+    document.getElementById('interest-trigger-apple-hero')?.addEventListener('click', () => openInterest('hero_ios'))
+
+    /* ── Store link tracking ── */
+    const trackPlayStore = (source: string) => () => {
+      track('store_link_clicked', { store: 'google_play', source })
+    }
+    document.getElementById('store-trigger-play')?.addEventListener('click', trackPlayStore('cta'))
+    document.getElementById('store-trigger-play-hero')?.addEventListener('click', trackPlayStore('hero'))
 
     /* ── Keyboard escape ── */
     const onKeydown = (e: KeyboardEvent) => {
