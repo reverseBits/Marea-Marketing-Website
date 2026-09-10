@@ -1371,6 +1371,18 @@ footer {
   .dl-btn { justify-content: center; width: min(240px, 82vw); }
 }
 
+/* ── Store buttons on the light hero background ── */
+.hero-dl-btns { justify-content: flex-start; margin-bottom: 1rem; }
+.hero-dl-btns .dl-btn:hover { box-shadow: 0 14px 34px rgba(122, 62, 62, .18); }
+.hero-dl-btns .dl-btn-apple  { background: var(--rose-dark); color: white; }
+.hero-dl-btns .dl-btn-google {
+  background: transparent; color: var(--rose-dark);
+  border: 1.5px solid var(--rose-light);
+}
+@media (max-width: 480px) {
+  .hero-dl-btns { align-items: flex-start; }
+}
+
 
 
 /* ============================================================
